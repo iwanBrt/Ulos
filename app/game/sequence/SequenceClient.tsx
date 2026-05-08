@@ -13,7 +13,12 @@ const stepEmojis = ["🧵", "🪡", "🧶", "🔍", "✂️"];
 
 function SortableStep({ id, text, index }: { id: string; text: string; index: number }) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id });
-  const style = { transform: CSS.Transform.toString(transform), transition, zIndex: isDragging ? 50 : 1 };
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    zIndex: isDragging ? 50 : 1,
+    touchAction: "none" as const,
+  };
   return (
     <li ref={setNodeRef} style={style} {...attributes} {...listeners}
       className={`cursor-grab active:cursor-grabbing rounded-[24px] border-2 p-5 flex items-center gap-4 transition-all duration-300 select-none ${isDragging ? "border-[#375534] bg-[#AEC3B0] shadow-2xl scale-[1.03] rotate-1" : "border-[#AEC3B0] bg-[#F7FBF2] hover:border-[#6B9071] hover:shadow-md"}`}>
@@ -31,8 +36,12 @@ function SortableStep({ id, text, index }: { id: string; text: string; index: nu
 }
 
 export default function SequenceClient() {
-  const pointerSensor = useSensor(PointerSensor);
-  const touchSensor = useSensor(TouchSensor);
+  const pointerSensor = useSensor(PointerSensor, {
+    activationConstraint: { distance: 5 },
+  });
+  const touchSensor = useSensor(TouchSensor, {
+    activationConstraint: { delay: 150, tolerance: 5 },
+  });
   const keyboardSensor = useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates });
   const sensors = useSensors(pointerSensor, touchSensor, keyboardSensor);
   const initialSteps = useMemo(() => [...procedureSteps].sort(() => Math.random() - 0.5), []);
