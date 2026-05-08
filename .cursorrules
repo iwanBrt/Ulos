@@ -1,0 +1,33 @@
+## 🗺️ User Flow (Alur Pengguna)
+
+Pengguna akan melewati alur gamifikasi yang terstruktur secara berurutan:
+
+1. **🏠 Landing Page (`/`)**
+   - Pengguna membuka halaman utama.
+   - Melihat etalase berbagai jenis kain Ulos beserta makna filosofisnya.
+   - Mengklik tombol **"Mulai Belajar Membuat Ulos"** untuk masuk ke mode interaktif.
+
+2. **🛠️ Tahap 1: Alat & Bahan (`/game/materials`)**
+   - Pengguna melihat meja kerja virtual dengan berbagai item (Benang, Alat Tenun, dll).
+   - Pengguna dapat mengklik setiap item.
+   - Sistem akan menampilkan deskripsi teks dan membacakannya menggunakan fitur suara (*Text-to-Speech*).
+   - Mengklik **"Next"** untuk lanjut.
+
+3. **📖 Tahap 2: Pembelajaran Prosedur (`/game/procedure`)**
+   - Pengguna membaca panduan langkah demi langkah cara menenun Ulos secara berurutan.
+   - Mengklik **"Next"** setelah memahami seluruh langkah.
+
+4. **🧩 Tahap 3: Sequencing Game (`/game/sequence`)**
+   - Pengguna dihadapkan pada papan *Drag and Drop*.
+   - Pengguna harus menyusun acak teks prosedur menjadi urutan yang 100% benar.
+   - Menekan tombol **"Check"**. Jika benar semua, tombol **"Next"** akan terbuka.
+
+5. **🏛️ Tahap 4: Culture Corner (`/game/culture`)**
+   - Tampil layar apresiasi dan pengenalan mendalam tentang jenis Ulos spesifik yang disimulasikan pada tahap sebelumnya.
+   - Mengklik **"Next"** untuk menuju evaluasi.
+
+6. **📝 Tahap 5: Quiz Time (`/game/quiz`)**
+   - Pengguna menjawab 5 hingga 7 pertanyaan pilihan ganda (data dari Supabase).
+   - Sistem langsung memberikan *feedback* (Benar/Salah) tiap soal.
+   - Menampilkan skor akhir di ujung kuis.
+   - Menyediakan opsi **"Main Lagi"** atau **"Kembali ke Beranda"**.
