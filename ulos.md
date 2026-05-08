@@ -9,3 +9,53 @@
  5. Ulos Bintang Maratur dan Mangiring: Doa untuk RegenerasiKedua ulos ini merupakan representasi dari harapan akan keberlanjutan garis keturunan (hagabeon), yang merupakan salah satu cita-cita tertinggi dalam hidup orang Batak.Ulos Bintang Maratur: Menggambarkan jajaran bintang yang tersusun dengan sangat rapi dan teratur. Motif ini membawa pesan tentang kepatuhan terhadap hukum adat, keteraturan hidup, dan kerukunan dalam keluarga. Ulos ini secara khusus diberikan oleh pihak Hula-hula kepada putrinya yang sedang hamil anak pertama pada upacara tujuh bulanan (Mula Gabe) sebagai doa agar persalinan berjalan lancar dan sang anak menjadi pribadi yang taat.Ulos Mangiring: Memiliki motif garis-garis yang saling beriringan. Nama mangiring sendiri berarti "mengiringi" atau "membimbing". Ulos ini sering diberikan oleh kakek atau nenek kepada cucu pertama dengan harapan bahwa setelah kelahiran sang cucu, akan segera "diiringi" oleh kelahiran adik-adiknya secara berurutan. Kain ini sangat populer digunakan sebagai parompa atau kain gendongan bayi.
  
  6. Ulos Pinunsaan: Wastra Elit dan KepemimpinanUlos Pinunsaan adalah salah satu jenis ulos yang paling mahal dan paling sakral. Secara teknis, ia menyerupai Ragidup tetapi memiliki detail yang jauh lebih rumit dan ukuran yang lebih besar. Pinunsaan adalah atribut wajib bagi para pemuka adat (Raja Adat) atau tuan rumah (Hasuhuton) dalam pesta-pesta adat yang berskala besar. Mengenakan Pinunsaan adalah pernyataan status sosial yang tinggi sekaligus tanggung jawab besar untuk menjaga integritas upacara adat yang berlangsung.
+
+
+ 1. Bahan Baku Utama dan Pewarna
+Secara tradisional, ulos dibuat dari serat alam yang diproses sendiri oleh para penenun sebelum masuk ke tahap penenunan.
+
+Benang: Kapas merupakan bahan dasar utama yang dipintal menjadi benang.
+
+Pewarna Alami: Warna tradisional ulos berasal dari berbagai tumbuhan lokal:
+
+Merah: Diperoleh dari akar atau kulit kayu mengkudu (noni), kayu secang, atau pepaya.
+
+Biru/Hitam: Dihasilkan dari tanaman indigo atau salaon (Indigofera tinctoria) yang difermentasi.
+
+Kuning: Berasal dari kunyit.
+
+Abu-abu: Diperoleh dari daun ketapang.
+
+Pengikat Warna (Fiksasi): Menggunakan bahan seperti kapur sirih, tawas, atau besi berkarat untuk memperkuat warna pada benang.
+
+Bahan Pelengkap Motif: Benang emas, perak, atau manik-manik (mote) untuk menghias ulos jenis tertentu seperti Ulos Sadum.
+
+2. Peralatan Pembuatan Benang dan Persiapan
+Sebelum ditenun, benang harus melalui tahap pemintalan dan penguatan agar tidak mudah putus.
+
+Sorha: Alat pemintal tradisional untuk mengubah gumpalan kapas menjadi helai benang.
+
+Hudon Tano (Periuk Tanah): Wadah untuk merendam benang dalam larutan pewarna alami selama berminggu-minggu hingga berbulan-bulan.
+
+Hulhulan: Alat berbentuk lingkaran untuk memutar dan memisahkan benang berdasarkan warnanya.
+
+Ijuk dan Nasi: Digunakan dalam proses unggas (pencerahan). Benang dilumuri nasi yang dilumerkan (indahan ni bonang), lalu digosok dengan kuas ijuk agar benang menjadi kenyal, kuat, dan berkilau.
+
+Anian: Sekeping balok kayu dengan tongkat-tongkat pendek yang berfungsi untuk menguntai benang sesuai ukuran panjang ulos yang diinginkan.
+
+3. Alat Tenun Tradisional (Gedogan)
+Masyarakat Batak menggunakan alat tenun punggung tradisional yang dioperasikan secara manual dengan komponen-komponen berikut:
+
+Tundalan / Situddalan: Kayu sandaran punggung penenun untuk menjaga ketegangan benang lungsi menggunakan berat badan.
+
+Sitanja: Dua bilah kayu penjepit benang yang diletakkan di atas pangkuan penenun.  
+
+Baliga: Kayu panjang dan pipih menyerupai pedang yang berfungsi untuk merapatkan benang pakan setelah dimasukkan.
+
+Hatulungan: Alat berbentuk seperti tombak untuk membagi benang.
+
+Pagabe: Alat untuk memegang benang yang sedang dipintal.
+
+Balobas: Bilah bambu atau kayu pipih untuk memisahkan benang lungsi saat membentuk corak atau motif tertentu.
+
+Lundu: Bulu landak yang digunakan secara spesifik untuk membuat motif-motif rumit pada kain.
