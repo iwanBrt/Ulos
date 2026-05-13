@@ -45,12 +45,12 @@ export default function ProcedureClient() {
       />
 
       {/* Progress Overview */}
-      <section className="bg-[#AEC3B0] rounded-[30px] p-6 flex flex-wrap gap-4 items-center justify-between border border-[#6B9071]/30 shadow-sm">
+      <section className="bg-[#FDA481] rounded-[30px] p-6 flex flex-wrap gap-4 items-center justify-between border border-[#B4182D]/30 shadow-sm">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[#375534] flex items-center justify-center text-[#E3EED4] text-lg shadow-md">📊</div>
+          <div className="w-10 h-10 rounded-full bg-[#242E49] flex items-center justify-center text-[#fff7ef] text-lg shadow-md">📊</div>
           <div>
-            <p className="font-bold text-[#0F2A1D]">Learning Progress</p>
-            <p className="text-sm text-[#375534] font-medium">
+            <p className="font-bold text-[#181A2F]">Learning Progress</p>
+            <p className="text-sm text-[#242E49] font-medium">
               {checkedSteps.length}/{procedureSteps.length} steps reviewed
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function ProcedureClient() {
             <div
               key={idx}
               className={`h-3 rounded-full transition-all duration-500 ${
-                checkedSteps.includes(idx) ? "w-10 bg-[#375534]" : "w-3 bg-[#E3EED4]"
+                checkedSteps.includes(idx) ? "w-10 bg-[#242E49]" : "w-3 bg-[#fff7ef]"
               }`}
             />
           ))}
@@ -77,8 +77,8 @@ export default function ProcedureClient() {
               key={step}
               className={`rounded-[28px] border-2 overflow-hidden transition-all duration-500 ${
                 isChecked
-                  ? "border-[#375534] bg-[#F7FBF2] shadow-lg"
-                  : "border-[#AEC3B0] bg-[#F7FBF2] hover:border-[#6B9071] hover:shadow-md"
+                  ? "border-[#242E49] bg-[#fff7ef] shadow-lg"
+                  : "border-[#FDA481] bg-[#fff7ef] hover:border-[#B4182D] hover:shadow-md"
               }`}
             >
               {/* Main step content — clickable to expand */}
@@ -91,8 +91,8 @@ export default function ProcedureClient() {
                 <div
                   className={`h-12 w-12 flex-shrink-0 rounded-xl font-bold flex items-center justify-center text-lg transition-all duration-300 shadow-md ${
                     isChecked
-                      ? "bg-[#0F2A1D] text-[#E3EED4] scale-105"
-                      : "bg-[#6B9071] text-[#E3EED4]"
+                      ? "bg-[#181A2F] text-[#fff7ef] scale-105"
+                      : "bg-[#B4182D] text-[#fff7ef]"
                   }`}
                 >
                   {isChecked ? "✓" : stepIcons[index]}
@@ -100,23 +100,23 @@ export default function ProcedureClient() {
 
                 <div className="flex-1 space-y-2 min-w-0">
                   <div className="flex items-center gap-3 flex-wrap">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#6B9071]">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#B4182D]">
                       Step {index + 1}
                     </span>
                     {isChecked && (
-                      <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-[#375534] text-[#E3EED4]">
+                      <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-[#242E49] text-[#fff7ef]">
                         ✅ Reviewed
                       </span>
                     )}
                   </div>
-                  <h3 className="text-lg font-extrabold text-[#0F2A1D]">{stepTitles[index]}</h3>
-                  <p className="text-[#375534] font-medium leading-relaxed">{step}</p>
+                  <h3 className="text-lg font-extrabold text-[#181A2F]">{stepTitles[index]}</h3>
+                  <p className="text-[#242E49] font-medium leading-relaxed">{step}</p>
                 </div>
 
                 {/* Expand chevron */}
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#AEC3B0]/50 flex items-center justify-center">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#FDA481]/50 flex items-center justify-center">
                   <svg
-                    className={`w-5 h-5 text-[#375534] transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
+                    className={`w-5 h-5 text-[#242E49] transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -129,12 +129,12 @@ export default function ProcedureClient() {
               {/* Expanded detail + Mark button */}
               {isExpanded && (
                 <div className="px-6 pb-6 space-y-4 animate-fade-in-up">
-                  <div className="border-t border-[#AEC3B0]" />
+                  <div className="border-t border-[#FDA481]" />
 
                   {/* Tip card */}
-                  <div className="bg-[#AEC3B0]/30 rounded-2xl p-5 space-y-2">
-                    <p className="text-sm font-bold text-[#375534] uppercase tracking-wider">💡 Additional Tips</p>
-                    <p className="text-sm text-[#375534] font-medium leading-relaxed">{stepTips[index]}</p>
+                  <div className="bg-[#FDA481]/30 rounded-2xl p-5 space-y-2">
+                    <p className="text-sm font-bold text-[#242E49] uppercase tracking-wider">💡 Additional Tips</p>
+                    <p className="text-sm text-[#242E49] font-medium leading-relaxed">{stepTips[index]}</p>
                   </div>
 
                   {/* Mark as Reviewed button — the primary action */}
@@ -144,7 +144,7 @@ export default function ProcedureClient() {
                         e.stopPropagation();
                         markStep(index);
                       }}
-                      className="w-full rounded-full bg-[#0F2A1D] px-8 py-3.5 text-[#E3EED4] font-bold text-base hover:bg-[#375534] transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg flex items-center justify-center gap-2"
+                      className="w-full rounded-full bg-[#181A2F] px-8 py-3.5 text-[#fff7ef] font-bold text-base hover:bg-[#242E49] transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg flex items-center justify-center gap-2"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -152,7 +152,7 @@ export default function ProcedureClient() {
                       Mark as Reviewed
                     </button>
                   ) : (
-                    <div className="w-full rounded-full bg-[#375534]/10 px-8 py-3.5 text-[#375534] font-bold text-base text-center border-2 border-[#375534]/30">
+                    <div className="w-full rounded-full bg-[#242E49]/10 px-8 py-3.5 text-[#242E49] font-bold text-base text-center border-2 border-[#242E49]/30">
                       ✅ Already Reviewed
                     </div>
                   )}
@@ -161,7 +161,7 @@ export default function ProcedureClient() {
 
               {/* Bottom accent line for reviewed steps */}
               {isChecked && (
-                <div className="h-1 bg-gradient-to-r from-[#375534] via-[#6B9071] to-[#AEC3B0]" />
+                <div className="h-1 bg-gradient-to-r from-[#242E49] via-[#B4182D] to-[#FDA481]" />
               )}
             </article>
           );
@@ -169,10 +169,10 @@ export default function ProcedureClient() {
       </section>
 
       {/* Navigation */}
-      <div className="flex justify-between items-center bg-[#AEC3B0]/30 rounded-[30px] p-6 border border-[#AEC3B0]">
+      <div className="flex justify-between items-center bg-[#FDA481]/30 rounded-[30px] p-6 border border-[#FDA481]">
         <Link
           href="/game/materials"
-          className="inline-flex items-center gap-2 text-[#375534] font-bold hover:text-[#0F2A1D] transition-colors"
+          className="inline-flex items-center gap-2 text-[#242E49] font-bold hover:text-[#181A2F] transition-colors"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -182,7 +182,7 @@ export default function ProcedureClient() {
         {allChecked ? (
           <Link
             href="/game/sequence"
-            className="inline-flex items-center gap-2 rounded-full bg-[#0F2A1D] px-8 py-3.5 text-[#E3EED4] font-bold hover:bg-[#375534] transition-all hover:scale-105 active:scale-95 shadow-lg"
+            className="inline-flex items-center gap-2 rounded-full bg-[#181A2F] px-8 py-3.5 text-[#fff7ef] font-bold hover:bg-[#242E49] transition-all hover:scale-105 active:scale-95 shadow-lg"
           >
             Continue to Stage 3
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -190,7 +190,7 @@ export default function ProcedureClient() {
             </svg>
           </Link>
         ) : (
-          <span className="rounded-full bg-[#AEC3B0] px-8 py-3.5 text-[#375534] font-bold cursor-not-allowed border-2 border-dashed border-[#6B9071]">
+          <span className="rounded-full bg-[#FDA481] px-8 py-3.5 text-[#242E49] font-bold cursor-not-allowed border-2 border-dashed border-[#B4182D]">
             Complete all steps first
           </span>
         )}
@@ -198,3 +198,4 @@ export default function ProcedureClient() {
     </GameShell>
   );
 }
+

@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 @view-transition {
   navigation: auto;

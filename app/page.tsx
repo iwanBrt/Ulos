@@ -1,17 +1,20 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
-// Scroll-reveal hook
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
-      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
     );
+
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
@@ -19,16 +22,25 @@ function useScrollReveal() {
   return { ref, isVisible };
 }
 
-function RevealSection({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+function RevealSection({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+}) {
   const { ref, isVisible } = useScrollReveal();
+
   return (
     <div
       ref={ref}
       className={className}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(40px)',
-        transition: `opacity 0.7s cubic-bezier(0.16,1,0.3,1) ${delay}ms, transform 0.7s cubic-bezier(0.16,1,0.3,1) ${delay}ms`,
+        transform: isVisible ? "translateY(0)" : "translateY(34px)",
+        transition: `opacity 0.75s cubic-bezier(0.16,1,0.3,1) ${delay}ms, transform 0.75s cubic-bezier(0.16,1,0.3,1) ${delay}ms`,
       }}
     >
       {children}
@@ -38,68 +50,80 @@ function RevealSection({ children, className = '', delay = 0 }: { children: Reac
 
 const ulosCatalog = [
   {
-    id: '1',
-    name: 'Ulos Ragidup',
-    subtitle: 'The Epicenter of Life & Blessings',
-    description: 'The highest-ranking Ulos in Toba hierarchy. Its name literally means "pattern of life" — a visual prayer for harmony, abundant offspring, and longevity.',
-    meaning: 'Given by the bride\'s parents to the groom\'s mother during weddings as a transfer of guardianship and deep familial bond.',
-    ceremony: 'Wedding (Ulos Pargomgom)',
-    tag: 'Sacred',
+    id: "1",
+    name: "Ulos Ragidup",
+    subtitle: "The Epicenter of Life & Blessings",
+    description:
+      'The highest-ranking Ulos in Toba hierarchy. Its name literally means "pattern of life", a visual prayer for harmony, abundant offspring, and longevity.',
+    meaning:
+      "Given by the bride's parents to the groom's mother during weddings as a transfer of guardianship and deep familial bond.",
+    ceremony: "Wedding (Ulos Pargomgom)",
+    tag: "Sacred",
   },
   {
-    id: '2',
-    name: 'Ulos Ragihotang',
-    subtitle: 'Symbol of Marital Bond & Resilience',
-    description: 'Named after "hotang" (rattan) — the strongest natural binder. Features dot-like patterns resembling rattan texture with wide, beautifully fringed edges.',
-    meaning: 'Draped over both newlyweds\' shoulders simultaneously, symbolizing the unification of two individuals into one bond as strong as rattan.',
-    ceremony: 'Wedding (Ulos Hela)',
-    tag: 'Matrimonial',
+    id: "2",
+    name: "Ulos Ragihotang",
+    subtitle: "Symbol of Marital Bond & Resilience",
+    description:
+      'Named after "hotang" (rattan), the strongest natural binder. It features dot-like patterns resembling rattan texture with wide, beautifully fringed edges.',
+    meaning:
+      "Draped over both newlyweds' shoulders simultaneously, symbolizing the unification of two individuals into one bond as strong as rattan.",
+    ceremony: "Wedding (Ulos Hela)",
+    tag: "Matrimonial",
   },
   {
-    id: '3',
-    name: 'Ulos Sadum',
-    subtitle: 'Aesthetics of Joy & Cultural Diplomacy',
-    description: 'Known for its bright palette, dominant red tones, floral motifs, and decorative beadwork. Embodies the dynamism and cheerfulness of Batak society.',
-    meaning: 'Used as Ulos Holong (love cloth) given by guests to express joy at weddings or births. In modern times, it serves as a cultural diplomacy gift for honored guests.',
-    ceremony: 'Celebrations & Diplomacy',
-    tag: 'Festive',
+    id: "3",
+    name: "Ulos Sadum",
+    subtitle: "Aesthetics of Joy & Cultural Diplomacy",
+    description:
+      "Known for its bright palette, dominant red tones, floral motifs, and decorative beadwork. It embodies the dynamism and cheerfulness of Batak society.",
+    meaning:
+      "Used as Ulos Holong, a love cloth given by guests to express joy at weddings or births. It also serves as a cultural diplomacy gift for honored guests.",
+    ceremony: "Celebrations & Diplomacy",
+    tag: "Festive",
   },
   {
-    id: '4',
-    name: 'Ulos Sibolang',
-    subtitle: 'Cloth of Transition & Mourning',
-    description: 'Distinguished by its dark navy or black base with arrowhead motifs on both ends. Plays a vital role during life\'s most painful transitions.',
-    meaning: 'Used as burial shroud (Ulos Saput) and as head covering (Ulos Tujung) for the surviving spouse, marking a period of deep mourning and ritual before re-entering society.',
-    ceremony: 'Funeral Rites',
-    tag: 'Ceremonial',
+    id: "4",
+    name: "Ulos Sibolang",
+    subtitle: "Cloth of Transition & Mourning",
+    description:
+      "Distinguished by its dark navy or black base with arrowhead motifs on both ends. It plays a vital role during life's most painful transitions.",
+    meaning:
+      "Used as burial shroud and as head covering for the surviving spouse, marking a period of deep mourning before re-entering society.",
+    ceremony: "Funeral Rites",
+    tag: "Ceremonial",
   },
   {
-    id: '5',
-    name: 'Ulos Bintang Maratur',
-    subtitle: 'Prayer for Orderly Regeneration',
-    description: 'Features neatly arranged star patterns symbolizing obedience to customary law, orderly living, and family harmony.',
-    meaning: 'Given by the Hula-hula to their daughter during the seventh-month pregnancy ceremony (Mula Gabe) as a prayer for safe delivery and a righteous child.',
-    ceremony: 'Pregnancy Ceremony',
-    tag: 'Blessing',
+    id: "5",
+    name: "Ulos Bintang Maratur",
+    subtitle: "Prayer for Orderly Regeneration",
+    description:
+      "Features neatly arranged star patterns symbolizing obedience to customary law, orderly living, and family harmony.",
+    meaning:
+      "Given by the Hula-hula to their daughter during the seventh-month pregnancy ceremony as a prayer for safe delivery and a righteous child.",
+    ceremony: "Pregnancy Ceremony",
+    tag: "Blessing",
   },
   {
-    id: '6',
-    name: 'Ulos Pinunsaan',
-    subtitle: 'Elite Cloth of Leadership',
-    description: 'One of the most expensive and sacred Ulos types. Technically similar to Ragidup but with far more intricate detail and larger dimensions.',
-    meaning: 'A mandatory attribute for customary leaders (Raja Adat) and ceremony hosts (Hasuhuton) at large-scale traditional events — a statement of high social status and great responsibility.',
-    ceremony: 'Leadership & Grand Ceremonies',
-    tag: 'Royal',
+    id: "6",
+    name: "Ulos Pinunsaan",
+    subtitle: "Elite Cloth of Leadership",
+    description:
+      "One of the most expensive and sacred Ulos types. It is technically similar to Ragidup but has far more intricate detail and larger dimensions.",
+    meaning:
+      "A mandatory attribute for customary leaders and ceremony hosts at large-scale traditional events, expressing status and responsibility.",
+    ceremony: "Leadership & Grand Ceremonies",
+    tag: "Royal",
   },
 ];
 
 const tagColors: Record<string, string> = {
-  Sacred: 'bg-[#0F2A1D] text-[#E3EED4]',
-  Matrimonial: 'bg-[#375534] text-[#E3EED4]',
-  Festive: 'bg-[#6B9071] text-[#E3EED4]',
-  Ceremonial: 'bg-[#375534] text-[#E3EED4]',
-  Blessing: 'bg-[#6B9071] text-[#E3EED4]',
-  Royal: 'bg-[#0F2A1D] text-[#E3EED4]',
+  Sacred: "bg-[#FDA481]/20 text-[#FDA481] ring-[#FDA481]/35",
+  Matrimonial: "bg-[#B4182D]/20 text-[#ff9aa7] ring-[#B4182D]/35",
+  Festive: "bg-[#FDA481]/20 text-[#ffe1d0] ring-[#FDA481]/35",
+  Ceremonial: "bg-[#242E49]/60 text-[#c9d2ea] ring-[#37415C]",
+  Blessing: "bg-[#54162B]/35 text-[#f3b4c3] ring-[#B4182D]/35",
+  Royal: "bg-[#181A2F]/70 text-[#FDA481] ring-[#FDA481]/30",
 };
 
 export default function LandingPage() {
@@ -109,247 +133,324 @@ export default function LandingPage() {
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,500&display=swap');
-        
+
         :root {
-          --color-1: #0F2A1D;
-          --color-2: #375534;
-          --color-3: #6B9071;
-          --color-4: #AEC3B0;
-          --color-5: #E3EED4;
+          --ink: #181A2F;
+          --navy: #242E49;
+          --slate: #37415C;
+          --peach: #FDA481;
+          --crimson: #B4182D;
+          --wine: #54162B;
         }
-        
-        html {
-          scroll-behavior: smooth;
-        }
-        
+
         body {
           font-family: 'Plus Jakarta Sans', sans-serif;
-          background-color: var(--color-5);
-          color: var(--color-1);
           margin: 0;
           padding: 0;
+          color: #fff7ef;
+          background:
+            linear-gradient(165deg, rgba(180,24,45,0.9) 0%, rgba(253,164,129,0.86) 24%, rgba(84,22,43,0.8) 50%, rgba(55,65,92,0.88) 73%, #181A2F 100%);
+          background-attachment: fixed;
         }
-        
+
         .font-serif {
           font-family: 'Lora', serif;
         }
 
-        .pattern-weave {
-          background-image: 
-            linear-gradient(45deg, rgba(174, 195, 176, 0.2) 25%, transparent 25%, transparent 75%, rgba(174, 195, 176, 0.2) 75%, rgba(174, 195, 176, 0.2)), 
-            linear-gradient(45deg, rgba(174, 195, 176, 0.2) 25%, transparent 25%, transparent 75%, rgba(174, 195, 176, 0.2) 75%, rgba(174, 195, 176, 0.2));
-          background-size: 20px 20px;
-          background-position: 0 0, 10px 10px;
+        .page-shell {
+          background-image:
+            linear-gradient(115deg, rgba(255,255,255,0.08), transparent 30%, rgba(253,164,129,0.12) 58%, transparent),
+            linear-gradient(90deg, rgba(255,255,255,0.026) 1px, transparent 1px),
+            linear-gradient(0deg, rgba(255,255,255,0.026) 1px, transparent 1px);
+          background-size: 100% 100%, 56px 56px, 56px 56px;
+        }
+
+        .glass {
+          background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.075));
+          border: 1px solid rgba(255,255,255,0.26);
+          box-shadow: 0 22px 70px rgba(24,26,47,0.2);
+          backdrop-filter: blur(26px) saturate(1.12);
+          -webkit-backdrop-filter: blur(26px) saturate(1.12);
+        }
+
+        .glass-dark {
+          background: linear-gradient(145deg, rgba(36,46,73,0.48), rgba(84,22,43,0.22), rgba(24,26,47,0.46));
+          border: 1px solid rgba(255,255,255,0.2);
+          box-shadow: 0 22px 72px rgba(24,26,47,0.26);
+          backdrop-filter: blur(28px) saturate(1.08);
+          -webkit-backdrop-filter: blur(28px) saturate(1.08);
+        }
+
+        .weave-lines {
+          background-image:
+            linear-gradient(45deg, rgba(253,164,129,0.16) 25%, transparent 25%, transparent 75%, rgba(253,164,129,0.16) 75%),
+            linear-gradient(45deg, rgba(255,255,255,0.06) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.06) 75%);
+          background-size: 24px 24px;
+          background-position: 0 0, 12px 12px;
         }
 
         .hover-lift {
-          transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+          transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease, box-shadow 0.3s ease;
         }
+
         .hover-lift:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 12px 24px rgba(15, 42, 29, 0.1);
+          transform: translateY(-4px);
+          border-color: rgba(253,164,129,0.5);
+          box-shadow: 0 24px 62px rgba(24,26,47,0.28);
         }
 
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        .anim-hero { animation: fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) both; }
-        .anim-hero-d1 { animation: fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.15s both; }
-        .anim-hero-d2 { animation: fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.3s both; }
-        .anim-hero-d3 { animation: fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.45s both; }
-        .anim-hero-img { animation: fadeInUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
 
         @keyframes float {
-          0%,100% { transform: translateY(0) rotate(6deg); }
-          50% { transform: translateY(-12px) rotate(6deg); }
+          0%, 100% { transform: translateY(0) rotate(1.5deg); }
+          50% { transform: translateY(-14px) rotate(-1.5deg); }
         }
+
+        .anim-hero { animation: fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) both; }
+        .anim-hero-d1 { animation: fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.12s both; }
+        .anim-hero-d2 { animation: fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.24s both; }
+        .anim-hero-d3 { animation: fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.36s both; }
         .float-anim { animation: float 6s ease-in-out infinite; }
       `}</style>
 
-      <div className="min-h-screen relative overflow-hidden text-[#0F2A1D]">
-        
-        {/* Navbar */}
-        <nav className="relative z-20 px-6 py-6 max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#0F2A1D] flex items-center justify-center text-[#E3EED4] font-bold text-xl">U</div>
-            <span className="font-bold text-xl tracking-tight text-[#0F2A1D]">Ulos<span className="text-[#6B9071]">Budaya</span></span>
+      <div className="page-shell min-h-screen overflow-x-hidden text-[#fff7ef]">
+        <nav className="relative z-30 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
+          <a href="#" className="flex items-center gap-3">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#181A2F]/85 text-sm font-black text-[#FDA481] ring-1 ring-white/20">
+              U
+            </span>
+            <span className="text-lg font-extrabold tracking-tight">
+              Ulos<span className="text-[#FDA481]">Budaya</span>
+            </span>
+          </a>
+
+          <div className="glass hidden rounded-full px-2 py-2 text-sm font-semibold text-white/82 md:flex">
+            <a href="#catalog" className="rounded-full px-5 py-2 transition hover:bg-white/12 hover:text-white">
+              Catalog
+            </a>
+            <a href="#philosophy" className="rounded-full px-5 py-2 transition hover:bg-white/12 hover:text-white">
+              Philosophy
+            </a>
+            <a href="#journey" className="rounded-full px-5 py-2 transition hover:bg-white/12 hover:text-white">
+              Journey
+            </a>
+            <a href="/game/materials" className="rounded-full px-5 py-2 transition hover:bg-white/12 hover:text-white">
+              Learning
+            </a>
           </div>
-          <div className="hidden md:flex gap-8 items-center font-medium text-[#375534]">
-            <a href="#catalog" className="hover:text-[#0F2A1D] transition-colors">Catalog</a>
-            <a href="#philosophy" className="hover:text-[#0F2A1D] transition-colors">Philosophy</a>
-            <a href="/game/materials" className="bg-[#375534] text-[#E3EED4] px-6 py-2.5 rounded-full hover:bg-[#0F2A1D] transition-colors shadow-md">Start Game</a>
-          </div>
+
+          <a
+            href="/game/play"
+            className="rounded-full bg-[#FDA481]/92 px-5 py-2.5 text-sm font-extrabold text-[#181A2F] shadow-lg shadow-[#54162B]/24 transition hover:bg-white"
+          >
+            Start Game
+          </a>
         </nav>
 
-        {/* Hero Section */}
-        <header className="relative pt-12 pb-24 px-6 z-10">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8 z-10">
-              <div className="anim-hero inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#6B9071] bg-[#AEC3B0]/30 text-[#375534] text-sm font-bold uppercase tracking-widest">
-                <span className="w-2 h-2 rounded-full bg-[#6B9071]"></span>
-                Interactive Education
+        <header className="relative z-10 px-5 pb-20 pt-10 md:px-8 md:pb-28 md:pt-16">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
+            <div className="max-w-3xl">
+              <div className="anim-hero glass mb-7 inline-flex items-center gap-3 rounded-full px-4 py-2 text-xs font-extrabold uppercase tracking-[0.24em] text-[#ffe1d0]">
+                <span className="h-2 w-2 rounded-full bg-[#FDA481] shadow-[0_0_18px_rgba(253,164,129,0.9)]" />
+                Interactive Ulos Culture
               </div>
-              <h1 className="anim-hero-d1 text-5xl md:text-7xl font-extrabold leading-[1.1] text-[#0F2A1D] tracking-tight">
-                Let&apos;s Preserve <br />
-                <span className="font-serif italic text-[#375534] font-medium">the Art of</span> Batak Weaving
+
+              <h1 className="anim-hero-d1 text-5xl font-extrabold leading-[1.06] tracking-tight text-white md:text-7xl">
+                Explore Ulos through a warm{" "}
+                <span className="font-serif italic font-semibold text-[#FDA481]">glassy</span>{" "}
+                interface.
               </h1>
-              <p className="anim-hero-d2 text-lg text-[#375534] max-w-lg leading-relaxed font-medium">
-                Discover the philosophical meaning behind every thread, and learn the Ulos weaving process through interactive game simulations.
+
+              <p className="anim-hero-d2 mt-7 max-w-2xl text-base font-medium leading-8 text-[#ffe8dc]/82 md:text-lg">
+                Discover the philosophy, motifs, and weaving process of Batak Ulos through an
+                immersive, modern, and culturally grounded learning experience.
               </p>
-              <div className="anim-hero-d3 flex flex-wrap gap-4 pt-4">
-                <a href="/game/materials" className="inline-flex items-center justify-center rounded-full bg-[#0F2A1D] text-[#E3EED4] font-semibold px-8 py-4 hover:bg-[#375534] transition-all hover:scale-105 active:scale-95 shadow-lg">
+
+              <div className="anim-hero-d3 mt-9 flex flex-wrap gap-4">
+                <a
+                  href="/game/play"
+                  className="inline-flex items-center justify-center rounded-full bg-[#FDA481]/92 px-7 py-4 font-extrabold text-[#181A2F] shadow-xl shadow-[#54162B]/25 transition hover:-translate-y-0.5 hover:bg-white"
+                >
                   Start Weaving Simulation
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
                 </a>
-                <a href="#catalog" className="inline-flex items-center justify-center rounded-full border-2 border-[#AEC3B0] bg-transparent text-[#0F2A1D] font-bold px-8 py-4 hover:bg-[#AEC3B0] transition-colors">
+                <a
+                  href="#catalog"
+                  className="glass inline-flex items-center justify-center rounded-full px-7 py-4 font-bold text-white transition hover:bg-white/20"
+                >
                   View Collection
+                </a>
+                <a
+                  href="/game/materials"
+                  className="glass inline-flex items-center justify-center rounded-full px-7 py-4 font-bold text-white transition hover:bg-white/20"
+                >
+                  Learning
                 </a>
               </div>
             </div>
 
-            {/* Right Image */}
-            <div className="anim-hero-img relative w-full aspect-square md:aspect-auto md:h-[600px] flex items-center justify-center">
-              <div className="absolute inset-0 bg-[#AEC3B0] rounded-[100px] float-anim opacity-40 scale-95"></div>
-              <div className="absolute inset-0 bg-[#6B9071] rounded-[100px] -rotate-3 transform opacity-30 scale-95"></div>
-              <div className="relative w-full h-full max-h-[500px] bg-gradient-to-b from-[#AEC3B0] to-[#375534] rounded-[100px] overflow-hidden shadow-2xl border-8 border-[#E3EED4]">
-                <img src="/images/landing.png" alt="Batak couple in traditional Ulos attire" className="w-full h-full object-contain object-bottom" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F2A1D]/70 via-transparent to-transparent"></div>
-                <div className="absolute bottom-10 left-10 right-10 text-[#E3EED4]">
-                  <p className="font-serif italic text-2xl mb-2">&quot;Threads of prayer and hope&quot;</p>
-                  <p className="text-sm text-[#AEC3B0] font-medium uppercase tracking-widest">Indonesian Heritage</p>
+            <div className="relative">
+              <div className="glass-dark float-anim overflow-hidden rounded-[2rem] p-3">
+                <div className="relative min-h-[440px] overflow-hidden rounded-[1.55rem] bg-gradient-to-b from-[#FDA481]/24 via-[#54162B]/30 to-[#181A2F]/82 md:min-h-[590px]">
+                  <Image
+                    src="/images/landing.png"
+                    alt="Batak couple in traditional Ulos attire"
+                    fill
+                    sizes="(min-width: 1024px) 46vw, 100vw"
+                    className="absolute inset-0 h-full w-full object-contain object-bottom drop-shadow-2xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#181A2F]/92 via-transparent to-[#FDA481]/12" />
+                  <div className="glass absolute bottom-5 left-5 right-5 rounded-[1.35rem] p-5">
+                    <p className="font-serif text-2xl italic text-white">Threads of prayer and hope</p>
+                    <p className="mt-2 text-xs font-extrabold uppercase tracking-[0.24em] text-[#FDA481]">
+                      Indonesian Heritage
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </header>
 
-        {/* Stats */}
         <RevealSection>
-          <section className="relative z-20 max-w-6xl mx-auto px-6 -mt-10 mb-20">
-            <div className="bg-[#0F2A1D] rounded-full py-8 px-12 shadow-xl flex flex-col md:flex-row justify-between items-center gap-8 divide-y md:divide-y-0 md:divide-x divide-[#375534]">
-              <div className="text-center md:w-1/3 pt-4 md:pt-0">
-                <p className="text-4xl font-extrabold text-[#E3EED4] mb-1">5+</p>
-                <p className="text-[#AEC3B0] font-medium text-sm">Interactive Stages</p>
-              </div>
-              <div className="text-center md:w-1/3 pt-4 md:pt-0">
-                <p className="text-4xl font-extrabold text-[#E3EED4] mb-1">{ulosCatalog.length}</p>
-                <p className="text-[#AEC3B0] font-medium text-sm">Types of Ulos</p>
-              </div>
-              <div className="text-center md:w-1/3 pt-4 md:pt-0">
-                <p className="text-4xl font-extrabold text-[#E3EED4] mb-1">100%</p>
-                <p className="text-[#AEC3B0] font-medium text-sm">Cultural Appreciation</p>
-              </div>
+          <section className="relative z-20 mx-auto -mt-8 mb-20 max-w-6xl px-5 md:px-8">
+            <div className="glass grid gap-4 rounded-[1.75rem] p-5 md:grid-cols-3 md:p-7">
+              {[
+                ["5+", "Interactive Stages"],
+                [String(ulosCatalog.length), "Types of Ulos"],
+                ["100%", "Cultural Appreciation"],
+              ].map(([number, label]) => (
+                <div key={label} className="rounded-[1.35rem] border border-white/12 bg-[#181A2F]/26 p-6 text-center">
+                  <p className="text-4xl font-black text-[#FDA481]">{number}</p>
+                  <p className="mt-1 text-sm font-semibold text-white/72">{label}</p>
+                </div>
+              ))}
             </div>
           </section>
         </RevealSection>
 
-        {/* Philosophy Section */}
-        <section id="philosophy" className="py-24 px-6 bg-[#AEC3B0] pattern-weave relative border-y border-[#6B9071]">
-          <div className="max-w-6xl mx-auto">
-            <RevealSection className="text-center mb-16 space-y-4">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F2A1D]">More Than Just Cloth</h2>
-              <p className="text-lg text-[#375534] max-w-2xl mx-auto font-medium">In Batak culture, Ulos represents warmth, affection, and blessings from the heart.</p>
+        <section id="philosophy" className="weave-lines px-5 py-24 md:px-8">
+          <div className="mx-auto max-w-6xl">
+            <RevealSection className="mb-14 max-w-3xl">
+              <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#FDA481]">
+                Cultural Philosophy
+              </span>
+              <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
+                More than cloth, Ulos is a living blessing.
+              </h2>
+              <p className="mt-5 text-lg font-medium leading-8 text-[#ffe8dc]/78">
+                In Batak culture, Ulos carries warmth, love, prayers, and family identity passed
+                down across generations.
+              </p>
             </RevealSection>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <RevealSection delay={0}>
-                <div className="bg-[#E3EED4] p-8 rounded-[40px] shadow-sm border border-[#6B9071]/30 text-center hover-lift">
-                  <div className="w-16 h-16 mx-auto bg-[#375534] rounded-full flex items-center justify-center text-[#E3EED4] mb-6">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-[#0F2A1D] mb-3">Historical Value</h3>
-                  <p className="text-[#375534] leading-relaxed text-sm font-medium">Every motif preserves ancestral stories and the social identity of Batak people across generations.</p>
-                </div>
-              </RevealSection>
 
-              <RevealSection delay={150}>
-                <div className="bg-[#E3EED4] p-8 rounded-[40px] shadow-sm border border-[#6B9071]/30 text-center hover-lift mt-0 md:mt-8">
-                  <div className="w-16 h-16 mx-auto bg-[#6B9071] rounded-full flex items-center justify-center text-[#0F2A1D] mb-6">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-[#0F2A1D] mb-3">Philosophy of Life</h3>
-                  <p className="text-[#375534] leading-relaxed text-sm font-medium">The tradition of giving Ulos (Mangulosi) reflects the kinship structure of Dalihan Na Tolu.</p>
-                </div>
-              </RevealSection>
-
-              <RevealSection delay={300}>
-                <div className="bg-[#E3EED4] p-8 rounded-[40px] shadow-sm border border-[#6B9071]/30 text-center hover-lift mt-0 md:mt-16">
-                  <div className="w-16 h-16 mx-auto bg-[#0F2A1D] rounded-full flex items-center justify-center text-[#AEC3B0] mb-6">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-[#0F2A1D] mb-3">Master Craftsmanship</h3>
-                  <p className="text-[#375534] leading-relaxed text-sm font-medium">The weaving process demands extraordinary patience and trains the weaver&apos;s precision and attention to detail.</p>
-                </div>
-              </RevealSection>
+            <div className="grid gap-5 md:grid-cols-3">
+              {[
+                ["01", "Historical Value", "Every motif preserves ancestral stories and the social identity of Batak people across generations."],
+                ["02", "Philosophy of Life", "The tradition of giving Ulos, or Mangulosi, reflects kinship, respect, and the Dalihan Na Tolu structure."],
+                ["03", "Master Craftsmanship", "The weaving process trains patience, precision, rhythm, and attention to meaning in every thread."],
+              ].map(([number, title, copy], index) => (
+                <RevealSection key={title} delay={index * 120}>
+                  <article className="glass hover-lift h-full rounded-[1.65rem] p-7">
+                    <p className="text-6xl font-black text-[#FDA481]/26">{number}</p>
+                    <h3 className="mt-6 text-2xl font-extrabold text-white">{title}</h3>
+                    <p className="mt-4 text-sm font-medium leading-7 text-[#ffe8dc]/76">{copy}</p>
+                  </article>
+                </RevealSection>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Ulos Catalog Section — 6 types from ulos.md */}
-        <section id="catalog" className="py-24 px-6 bg-[#E3EED4]">
-          <div className="max-w-7xl mx-auto">
-            <RevealSection className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-              <div className="space-y-3">
-                <span className="text-[#6B9071] font-bold tracking-widest uppercase text-sm">Encyclopedia Catalog</span>
-                <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F2A1D]">Discover Ulos Types</h2>
-                <p className="text-[#375534] font-medium max-w-xl">Each Ulos carries centuries of meaning, from sacred wedding cloths to symbols of leadership and mourning.</p>
+        <section id="catalog" className="px-5 py-24 md:px-8">
+          <div className="mx-auto max-w-7xl">
+            <RevealSection className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+              <div className="max-w-2xl">
+                <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#FDA481]">
+                  Encyclopedia Catalog
+                </span>
+                <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
+                  Discover Ulos Types
+                </h2>
+                <p className="mt-5 text-base font-medium leading-8 text-[#ffe8dc]/78">
+                  Each Ulos carries centuries of meaning, from sacred wedding cloths to symbols of
+                  leadership, mourning, and blessing.
+                </p>
               </div>
-              <div className="bg-[#0F2A1D] text-[#E3EED4] px-5 py-2.5 rounded-full font-bold text-sm shadow-md flex-shrink-0">
+              <div className="glass rounded-full px-5 py-2.5 text-sm font-extrabold text-[#FDA481]">
                 {ulosCatalog.length} types
               </div>
             </RevealSection>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
               {ulosCatalog.map((ulos, idx) => {
                 const isExpanded = expandedUlos === ulos.id;
+
                 return (
-                  <RevealSection key={ulos.id} delay={idx * 100}>
-                    <div className={`bg-[#AEC3B0] rounded-[32px] border-2 hover-lift group transition-all duration-500 ${isExpanded ? 'border-[#375534] shadow-xl' : 'border-[#6B9071]/20'}`}>
-                      {/* Header */}
-                      <div className="p-6 pb-0">
-                        <div className="flex items-start justify-between gap-3 mb-3">
-                          <div className="w-12 h-12 rounded-2xl bg-[#375534] flex items-center justify-center text-[#E3EED4] font-extrabold text-lg shadow-md flex-shrink-0">
+                  <RevealSection key={ulos.id} delay={idx * 85}>
+                    <article
+                      className={`glass-dark hover-lift h-full rounded-[1.65rem] transition ${
+                        isExpanded ? "ring-1 ring-[#FDA481]/55" : ""
+                      }`}
+                    >
+                      <div className="p-6">
+                        <div className="mb-5 flex items-start justify-between gap-3">
+                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#FDA481]/92 text-lg font-black text-[#181A2F]">
                             {idx + 1}
                           </div>
-                          <span className={`px-3 py-1 rounded-full text-xs font-bold ${tagColors[ulos.tag] || 'bg-[#375534] text-[#E3EED4]'}`}>
+                          <span
+                            className={`rounded-full px-3 py-1 text-xs font-extrabold ring-1 ${
+                              tagColors[ulos.tag] || tagColors.Sacred
+                            }`}
+                          >
                             {ulos.tag}
                           </span>
                         </div>
-                        <h3 className="text-xl font-extrabold text-[#0F2A1D] mb-1">{ulos.name}</h3>
-                        <p className="text-sm font-bold text-[#375534] font-serif italic mb-3">{ulos.subtitle}</p>
-                        <p className="text-[#375534] text-sm leading-relaxed font-medium line-clamp-3">{ulos.description}</p>
-                      </div>
 
-                      {/* Ceremony badge */}
-                      <div className="px-6 pt-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E3EED4] text-xs font-bold text-[#375534]">
-                          🎭 {ulos.ceremony}
+                        <h3 className="text-xl font-black text-white">{ulos.name}</h3>
+                        <p className="mt-1 font-serif text-sm font-semibold italic text-[#FDA481]">
+                          {ulos.subtitle}
+                        </p>
+                        <p className="mt-4 text-sm font-medium leading-7 text-[#ffe8dc]/76">
+                          {ulos.description}
+                        </p>
+
+                        <div className="mt-5 inline-flex rounded-full border border-white/12 bg-white/8 px-3 py-1.5 text-xs font-bold text-white/74">
+                          {ulos.ceremony}
                         </div>
-                      </div>
 
-                      {/* Expandable meaning */}
-                      <div className="p-6 pt-4">
                         <button
+                          type="button"
                           onClick={() => setExpandedUlos(isExpanded ? null : ulos.id)}
-                          className="w-full text-left"
+                          className="mt-6 w-full rounded-[1.2rem] border border-white/12 bg-white/9 p-4 text-left transition hover:bg-white/14"
                         >
-                          <div className={`bg-[#E3EED4] rounded-2xl p-5 border border-[#6B9071]/30 transition-all duration-500 ${isExpanded ? 'shadow-md' : ''}`}>
-                            <div className="flex items-center justify-between mb-2">
-                              <p className="text-xs font-bold text-[#6B9071] uppercase tracking-wider">Cultural Meaning</p>
-                              <svg className={`w-4 h-4 text-[#6B9071] transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                              </svg>
-                            </div>
-                            {isExpanded ? (
-                              <p className="font-serif text-[#0F2A1D] italic text-sm leading-relaxed">&quot;{ulos.meaning}&quot;</p>
-                            ) : (
-                              <p className="text-[#375534] text-xs font-medium">Click to reveal cultural significance →</p>
-                            )}
+                          <div className="flex items-center justify-between gap-3">
+                            <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#FDA481]">
+                              Cultural Meaning
+                            </p>
+                            <svg
+                              className={`h-4 w-4 text-[#FDA481] transition-transform ${
+                                isExpanded ? "rotate-180" : ""
+                              }`}
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
                           </div>
+
+                          <p className="mt-3 text-sm font-medium leading-7 text-[#ffe8dc]/80">
+                            {isExpanded ? ulos.meaning : "Click to reveal cultural significance."}
+                          </p>
                         </button>
                       </div>
-                    </div>
+                    </article>
                   </RevealSection>
                 );
               })}
@@ -357,38 +458,68 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <RevealSection>
-          <section className="py-24 px-6 bg-[#0F2A1D] text-[#E3EED4] relative overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#375534] rounded-full blur-3xl opacity-50"></div>
-            <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-[#6B9071] rounded-full blur-3xl opacity-30"></div>
-            <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
-              <h2 className="text-5xl md:text-6xl font-extrabold leading-tight">
-                Ready to Start the <br /> <span className="text-[#AEC3B0]">Ulos Weaving Simulation?</span>
-              </h2>
-              <p className="text-xl text-[#AEC3B0] max-w-2xl mx-auto font-medium">
-                Learn the tools, understand the process, and test your knowledge in a fun interactive quiz.
-              </p>
-              <div className="pt-8">
-                <a href="/game/materials" className="inline-flex items-center justify-center bg-[#E3EED4] text-[#0F2A1D] font-extrabold text-lg px-12 py-5 rounded-full hover:bg-[#AEC3B0] transition-colors shadow-[0_0_40px_rgba(174,195,176,0.3)] hover:shadow-[0_0_60px_rgba(174,195,176,0.5)]">
-                  Begin Learning
+          <section id="journey" className="px-5 pb-24 md:px-8">
+            <div className="glass-dark mx-auto grid max-w-6xl items-center gap-8 overflow-hidden rounded-[2rem] p-7 md:grid-cols-[1fr_0.7fr] md:p-10">
+              <div>
+                <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#FDA481]">
+                  Learning Journey
+                </span>
+                <h2 className="mt-4 text-4xl font-black leading-tight text-white md:text-5xl">
+                  Ready to start the Ulos weaving simulation?
+                </h2>
+                <p className="mt-5 max-w-2xl text-base font-medium leading-8 text-[#ffe8dc]/78">
+                  Learn the tools, understand the process, and test your knowledge through a guided
+                  interactive game flow.
+                </p>
+                <a
+                  href="/game/play"
+                  className="mt-8 inline-flex rounded-full bg-[#FDA481]/92 px-8 py-4 font-extrabold text-[#181A2F] shadow-xl shadow-[#54162B]/24 transition hover:bg-white"
+                >
+                  Play Game
                 </a>
+                <a
+                  href="/game/materials"
+                  className="ml-0 mt-3 inline-flex rounded-full bg-white/12 px-8 py-4 font-extrabold text-white transition hover:bg-white/18 md:ml-3"
+                >
+                  Learning
+                </a>
+              </div>
+
+              <div className="rounded-[1.5rem] border border-white/12 bg-[#181A2F]/32 p-5">
+                <div className="space-y-4">
+                  {["Materials", "Procedure", "Culture Quiz"].map((item, index) => (
+                    <div key={item} className="flex items-center gap-4 rounded-[1.15rem] bg-white/8 p-4">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#FDA481] text-sm font-black text-[#181A2F]">
+                        {index + 1}
+                      </span>
+                      <span className="font-bold text-white">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
         </RevealSection>
 
-        {/* Footer */}
-        <footer className="bg-[#375534] text-[#AEC3B0] py-10 px-6 border-t border-[#0F2A1D]/20">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <footer className="border-t border-white/10 bg-[#181A2F]/78 px-5 py-10 text-[#ffe8dc]/70 md:px-8">
+          <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-[#E3EED4] flex items-center justify-center text-[#0F2A1D] font-bold text-sm">U</div>
-              <span className="font-bold text-[#E3EED4]">UlosBudaya</span>
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FDA481] text-sm font-black text-[#181A2F]">
+                U
+              </div>
+              <span className="font-extrabold text-white">UlosBudaya</span>
             </div>
-            <p className="text-sm font-medium text-center">© 2026 Ulos Interactive Learning. Preserving Indonesia&apos;s weaving heritage.</p>
+            <p className="text-center text-sm font-medium">
+              © 2026 Ulos Interactive Learning. Preserving Indonesia&apos;s weaving heritage.
+            </p>
             <div className="flex gap-6 text-sm font-bold">
-              <a href="#" className="hover:text-[#E3EED4] transition-colors">Guide</a>
-              <a href="#" className="hover:text-[#E3EED4] transition-colors">About Us</a>
+              <a href="#" className="transition hover:text-[#FDA481]">
+                Guide
+              </a>
+              <a href="#" className="transition hover:text-[#FDA481]">
+                About Us
+              </a>
             </div>
           </div>
         </footer>
