@@ -63,42 +63,42 @@ const ulosItems: UlosItem[] = [
   {
     id: "ragidup",
     name: "Ulos Ragidup",
-    icon: "/images/icons/ulos-ragihotang.svg",
+    icon: "/images/ulos/ulos ragidup - Edited.png",
     color: "#B4182D",
     meaning: "The Epicenter of Life & Blessings",
   },
   {
     id: "ragihotang",
     name: "Ragi Hotang",
-    icon: "/images/icons/ulos-ragihotang.svg",
+    icon: "/images/ulos/ulos ragi hotang - Edited.png",
     color: "#B4182D",
     meaning: "A symbol of strong marital bond, like rattan that binds tightly.",
   },
   {
     id: "sadum",
     name: "Ulos Sadum",
-    icon: "/images/icons/ulos-sadum.svg",
+    icon: "/images/ulos/Ulos Sadum - Edited.png",
     color: "#FDA481",
     meaning: "A joyful Ulos for celebration, affection, and honoring guests.",
   },
   {
     id: "sibolang",
     name: "Ulos Sibolang",
-    icon: "/images/icons/ulos-sibolang.svg",
+    icon: "/images/ulos/Ulos Sibolang - Edited.png",
     color: "#242E49",
     meaning: "A solemn Ulos used in moments of transition and mourning.",
   },
   {
     id: "bintangmaratur",
     name: "Bintang Maratur",
-    icon: "/images/icons/ulos-sadum.svg",
+    icon: "/images/ulos/Bintang Maratur - Edited.png",
     color: "#54162B",
     meaning: "Prayer for orderly living and family harmony.",
   },
   {
     id: "pinunsaan",
     name: "Ulos Pinunsaan",
-    icon: "/images/icons/ulos-sibolang.svg",
+    icon: "/images/ulos/ulos pinunsaan - Edited.png",
     color: "#181A2F",
     meaning: "Elite Cloth of Leadership",
   },
@@ -205,7 +205,8 @@ function DraggableUlos({
         alt={item.name}
         width={compact ? 64 : 118}
         height={compact ? 42 : 78}
-        className="drop-shadow-md"
+        className="drop-shadow-md object-cover rounded-md w-full"
+        style={{ aspectRatio: "3/2", objectFit: "cover" }}
       />
       <span className={compact ? "sr-only" : "text-sm font-black text-[#181A2F] uppercase"}>{item.name}</span>
     </button>
@@ -246,7 +247,7 @@ function CharacterDropZone({
       if (ulosId === "ragihotang") rawPath = "/images/characters/wanita_ragi_totong - Edited.png";
       if (ulosId === "sadum") rawPath = "/images/characters/wanita_sodum - Edited.png";
       if (ulosId === "sibolang") rawPath = "/images/characters/wanita_sibolang - Edited.png";
-      if (ulosId === "bintangmaratur") rawPath = "/images/characters/wanita_Ulos Pinunsaan - Edited (1).png";
+      if (ulosId === "bintangmaratur") rawPath = "/images/characters/wanita_Bintang_Maratur.png";
       if (ulosId === "pinunsaan") rawPath = "/images/characters/wanita_Ulos Pinunsaan - Edited.png";
     }
     return encodeURI(rawPath);
@@ -771,7 +772,7 @@ export default function SangParulosGame() {
             <DragOverlay>
               {activeItem ? (
                 <div className="neo-box p-4 bg-[#fff7ef] shadow-[16px_16px_0_#FDA481] scale-110 -rotate-3 z-50">
-                  <Image src={activeItem.icon} alt={activeItem.name} width={132} height={88} className="drop-shadow-md" />
+                  <Image src={activeItem.icon} alt={activeItem.name} width={132} height={88} className="drop-shadow-md object-cover rounded-md" style={{ aspectRatio: "3/2", objectFit: "cover" }} />
                   <p className="mt-2 text-center text-sm font-black uppercase border-t-2 border-[#181A2F] pt-2 text-[#181A2F]">
                     {activeItem.name}
                   </p>
