@@ -51,57 +51,57 @@ function RevealSection({
 const ensembleCatalog = [
   {
     id: "1",
-    name: "Tutup Kepala (Tali-tali / Topi)",
-    subtitle: "Mahkota Kehormatan & Kebijaksanaan",
+    name: "Head Covering (Tali-tali / Cap)",
+    subtitle: "Crown of Honor & Wisdom",
     description:
-      "Tutup kepala tradisional Batak Toba (seperti Tali-tali Adat atau Topi Raja) melambangkan konsentrasi pikiran yang lurus, wibawa kepemimpinan adat, kehormatan diri yang dijaga luhur, serta perlindungan rohani.",
+      "The traditional head covering of the Batak Toba (such as Tali-tali Adat or Topi Raja) symbolizes straight concentration of thoughts, authority in traditional leadership, highly guarded personal honor, and spiritual protection.",
     meaning:
-      "Ikat kepala sitorga tenun tiga warna sakral (merah, putih, hitam) menyimbolkan kekuatan, kesucian, dan kewibawaan yang bersatu selaras mematuhi tatanan adat Dalihan Na Tolu.",
-    ceremony: "Upacara Penobatan & Pernikahan",
+      "The sacred three-colored (red, white, black) woven sitorga headband symbolizes strength, purity, and authority united in harmony adhering to the custom system of Dalihan Na Tolu.",
+    ceremony: "Coronation & Wedding Ceremony",
     tag: "Sacred",
   },
   {
     id: "2",
-    name: "Baju Raja / Baju Adat",
-    subtitle: "Wibawa & Karakter Pemimpin Sejati",
+    name: "Baju Raja / Traditional Shirt",
+    subtitle: "Authority & Character of a True Leader",
     description:
-      "Pakaian atas berbahan beludru hitam tebal dengan sulaman benang emas megah pada pinggirannya. Menunjukkan kedudukan sosial yang tinggi bagi para pemuka adat atau raja.",
+      "Upper garment made of thick black velvet with magnificent gold thread embroidery on its borders. It signifies a high social standing for custom leaders or kings.",
     meaning:
-      "Menggambarkan wibawa kepemimpinan yang mengayomi seluruh lapisan masyarakat, kejujuran luhur, pertahanan mental, serta karisma yang bersahaja.",
-    ceremony: "Pernikahan & Sidang Adat",
+      "Depicts the authority of leadership that protects all layers of society, noble honesty, mental fortitude, and a humble yet powerful charisma.",
+    ceremony: "Wedding & Customary Assembly",
     tag: "Royal",
   },
   {
     id: "3",
-    name: "Kain Ulos Adat",
-    subtitle: "Selendang Doa Restu & Kehangatan Jiwa",
+    name: "Traditional Ulos Cloth",
+    subtitle: "Shawl of Blessings & Warmth of the Soul",
     description:
-      "Kain tenun sakral khas Batak (Ragidup, Ragi Hotang, Sadum, dll.) yang disampirkan di pundak atau dililitkan di dada, membawa berkat doa luhur dari leluhur.",
+      "The sacred woven fabric typical of the Batak people (Ragidup, Ragi Hotang, Sadum, etc.) draped over the shoulder or wrapped around the chest, carrying noble blessings from the ancestors.",
     meaning:
-      "Tradisi 'Mangulosi' melambangkan restu kehangatan kasih sayang, doa perlindungan hidup, umur panjang, serta ikatan persaudaraan yang kokoh tak terpisahkan.",
-    ceremony: "Momen Sakral & Pesta Sukacita",
+      "The tradition of 'Mangulosi' symbolizes the blessing of warm affection, prayers for protection of life, longevity, and a strong, inseparable bond of brotherhood.",
+    ceremony: "Sacred Moments & Festive Parties",
     tag: "Sacred",
   },
   {
     id: "4",
-    name: "Sabuk / Ikat Pinggang Adat",
-    subtitle: "Disiplin Diri & Pengendalian Nafsu",
+    name: "Custom Belt / Waistband",
+    subtitle: "Self-Discipline & Control of Desire",
     description:
-      "Ikat pinggang tenun tebal dengan hiasan geometris khas Batak yang melingkari busana dengan erat dan rapi.",
+      "A thick woven belt with signature Batak geometric ornaments that tightly and neatly encircles the attire.",
     meaning:
-      "Melambangkan kesiapan diri penuh untuk bekerja keras, keteguhan hati memegang janji luhur, integritas moral tinggi, serta kemampuan mengontrol nafsu negatif.",
-    ceremony: "Pesta Pernikahan & Ritual Adat",
+      "Symbolizes full self-readiness to work hard, firm determination in keeping noble promises, high moral integrity, and the ability to control negative desires.",
+    ceremony: "Wedding Party & Customary Ritual",
     tag: "Blessing",
   },
   {
     id: "5",
-    name: "Haen / Celana Adat",
-    subtitle: "Kekokohan Langkah & Tanggung Jawab",
+    name: "Haen / Custom Trousers",
+    subtitle: "Sturdiness of Steps & Responsibility",
     description:
-      "Kain bawahan lilit tradisional (Haen) bagi kaum wanita atau celana formal hitam dengan detail songket emas di bagian bawahnya bagi kaum pria.",
+      "Traditional wrap-around lower cloth (Haen) for women or formal black trousers with gold songket details at the bottom for men.",
     meaning:
-      "Melambangkan pondasi karakter hidup yang kokoh, kesiapan memikul tanggung jawab besar sebagai penopang keluarga, serta kedisiplinan langkah dalam mengarungi kerasnya kehidupan.",
-    ceremony: "Aktivitas Harian & Resepsi Adat",
+      "Symbolizes a sturdy foundation of life character, readiness to bear great responsibilities as a family provider, and disciplined steps in navigating the hardships of life.",
+    ceremony: "Daily Activities & Custom Reception",
     tag: "Ceremonial",
   },
 ];
@@ -250,7 +250,7 @@ export default function LandingPage() {
               </h1>
 
               <p className="anim-hero-d2 mt-7 max-w-2xl text-base font-medium leading-8 text-[#ffe8dc]/82 md:text-lg">
-                Jelajahi, padupadankan, dan pahami makna filosofis mendalam dari pakaian adat Batak Toba seutuhnya—mulai dari Baju Raja, Celana, Sabuk Adat, Ulos sakral, hingga Tutup Kepala—melalui studio interaktif digital yang modern dan elegan.
+                Explore, mix and match, and understand the deep philosophical meaning of complete Batak Toba traditional attire—ranging from Baju Raja, Trousers, Custom Belt, sacred Ulos, to Head Coverings—through a modern and elegant digital interactive studio.
               </p>
 
               <div className="anim-hero-d3 mt-9 flex flex-wrap gap-4">
@@ -258,7 +258,7 @@ export default function LandingPage() {
                   href="/game/play"
                   className="inline-flex items-center justify-center rounded-full bg-[#FDA481]/92 px-7 py-4 font-extrabold text-[#181A2F] shadow-xl shadow-[#54162B]/25 transition hover:-translate-y-0.5 hover:bg-white"
                 >
-                  Masuki Studio Adat
+                  Enter Custom Studio
                   <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
@@ -267,13 +267,13 @@ export default function LandingPage() {
                   href="#catalog"
                   className="glass inline-flex items-center justify-center rounded-full px-7 py-4 font-bold text-white transition hover:bg-white/20"
                 >
-                  Koleksi Busana
+                  Attire Collection
                 </a>
                 <a
                   href="/game/materials"
                   className="glass inline-flex items-center justify-center rounded-full px-7 py-4 font-bold text-white transition hover:bg-white/20"
                 >
-                  Modul Belajar
+                  Learning Modules
                 </a>
               </div>
             </div>
@@ -291,9 +291,9 @@ export default function LandingPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#181A2F]/92 via-transparent to-[#FDA481]/12" />
                   <div className="glass absolute bottom-5 left-5 right-5 rounded-[1.35rem] p-5">
-                    <p className="font-serif text-xl italic text-white">Doa & Restu dalam Lembaran Busana</p>
+                    <p className="font-serif text-xl italic text-white">Prayers & Blessings in Attire Folds</p>
                     <p className="mt-2 text-xs font-extrabold uppercase tracking-[0.24em] text-[#FDA481]">
-                      Warisan Agung Adat Batak Toba
+                      Grand Heritage of Batak Toba Custom
                     </p>
                   </div>
                 </div>
@@ -308,17 +308,17 @@ export default function LandingPage() {
             <RevealSection className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div className="max-w-2xl">
                 <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#FDA481]">
-                  Katalog Ensiklopedia
+                  Encyclopedia Catalog
                 </span>
                 <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
                   Traditional Ensemble
                 </h2>
                 <p className="mt-5 text-base font-medium leading-8 text-[#ffe8dc]/78">
-                  Setiap elemen pakaian adat Batak menyimpan doa, amanah, tatanan moral, dan status adat yang diwariskan secara turun-temurun dari generasi ke generasi.
+                  Every element of Batak traditional clothing holds prayers, trust, moral order, and customary status passed down from generation to generation.
                 </p>
               </div>
               <div className="glass rounded-full px-5 py-2.5 text-sm font-extrabold text-[#FDA481]">
-                {ensembleCatalog.length} Komponen Utama
+                {ensembleCatalog.length} Main Components
               </div>
             </RevealSection>
 
@@ -366,7 +366,7 @@ export default function LandingPage() {
                         >
                           <div className="flex items-center justify-between gap-3">
                             <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#FDA481]">
-                              Makna Filosofis Adat
+                              Philosophical Meaning of Custom
                             </p>
                             <svg
                               className={`h-4 w-4 text-[#FDA481] transition-transform ${
@@ -381,7 +381,7 @@ export default function LandingPage() {
                           </div>
 
                           <p className="mt-3 text-sm font-medium leading-7 text-[#ffe8dc]/80">
-                            {isExpanded ? item.meaning : "Klik untuk menyingkap makna adat luhur."}
+                            {isExpanded ? item.meaning : "Click to reveal the noble custom meaning."}
                           </p>
                         </button>
                       </div>
@@ -402,28 +402,28 @@ export default function LandingPage() {
                   Interactive Studio Journey
                 </span>
                 <h2 className="mt-4 text-4xl font-black leading-tight text-white md:text-5xl">
-                  Siap Memulai Petualangan Adat Batak?
+                  Ready to Begin your Batak Custom Adventure?
                 </h2>
                 <p className="mt-5 max-w-2xl text-base font-medium leading-8 text-[#ffe8dc]/78">
-                  Pelajari nama alat tenun, uji kemampuan mencocokkan kegunaan alat tenun, rancang alur menenun, padukan pakaian adat Batak sesuai skenario adat, dan selesaikan quiz final.
+                  Learn the names of weaving tools, test your ability to match weaving tool functions, design the weaving workflow, combine Batak traditional clothing according to customary scenarios, and complete the final quiz.
                 </p>
                 <a
                   href="/game/play"
                   className="mt-8 inline-flex rounded-full bg-[#FDA481]/92 px-8 py-4 font-extrabold text-[#181A2F] shadow-xl shadow-[#54162B]/24 transition hover:bg-white"
                 >
-                  Masuk Game Center
+                  Enter Game Center
                 </a>
                 <a
                   href="/game/materials"
                   className="ml-0 mt-3 inline-flex rounded-full bg-white/12 px-8 py-4 font-extrabold text-white transition hover:bg-white/18 md:ml-3"
                 >
-                  Mulai Belajar
+                  Start Learning
                 </a>
               </div>
 
               <div className="rounded-[1.5rem] border border-white/12 bg-[#181A2F]/32 p-5">
                 <div className="space-y-4">
-                  {["Materi Alat", "Mencocokkan Fungsi", "Alur Kerja Tenun", "Kuis & Menghias Busana"].map((item, index) => (
+                  {["Tool Materials", "Matching Functions", "Weaving Workflow", "Quiz & Dress Attire"].map((item, index) => (
                     <div key={item} className="flex items-center gap-4 rounded-[1.15rem] bg-white/8 p-4">
                       <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#FDA481] text-sm font-black text-[#181A2F]">
                         {index + 1}
@@ -446,7 +446,7 @@ export default function LandingPage() {
               <span className="font-bold text-white">Digital Fashion Studio</span>
             </div>
             <p className="text-xs font-semibold text-white/50">
-              &copy; {new Date().getFullYear()} Digital Fashion Studio · Budaya Batak Toba.
+              &copy; {new Date().getFullYear()} Digital Fashion Studio · Batak Toba Culture.
             </p>
           </div>
         </footer>

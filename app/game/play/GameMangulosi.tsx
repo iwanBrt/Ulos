@@ -193,10 +193,10 @@ const ITEMS: OutfitItem[] = [
 const SCENARIOS: Scenario[] = [
   {
     id: "life-blessing",
-    title: "Upacara Doa & Restu Kehidupan",
-    prompt: "Pihak orang tua pengantin wanita (Hula-hula) memberikan restu kehidupan kepada ibu pengantin pria dengan menyelimutkan Ulos kasta tertinggi di atas bahunya. Lengkapilah pakaian adat formal yang agung untuk momen sakral ini.",
-    hint: "Ulos berkasta tertinggi adalah Ulos Ragidup. Pasangkan dengan Baju Raja, Celana Adat, Sabuk Adat, dan Topi Raja.",
-    success: "Luar biasa! Ulos Ragidup bersama perpaduan lengkap Baju Raja melambangkan restu doa kehidupan paling mendalam serta perlindungan leluhur yang agung.",
+    title: "Life Blessing & Prayer Ceremony",
+    prompt: "The bride's parents (Hula-hula) bestow life blessings to the groom's mother by draping the highest hierarchy Ulos over her shoulders. Complete the grand traditional formal attire for this sacred moment.",
+    hint: "The highest hierarchy Ulos is Ulos Ragidup. Pair it with Baju Raja, Celana Adat, Sabuk Adat, and Topi Raja.",
+    success: "Outstanding! Ulos Ragidup together with the complete Baju Raja ensemble symbolizes the deepest life prayers and grand ancestral protection.",
     correctOutfit: {
       baju: "baju-raja",
       celana: "celana-adat",
@@ -208,10 +208,10 @@ const SCENARIOS: Scenario[] = [
   },
   {
     id: "wedding",
-    title: "Pemberkatan Pernikahan (Mangulosi Hela)",
-    prompt: "Sebuah pernikahan adat Batak Toba yang megah sedang dilangsungkan. Dandani sang pengantin pria dengan Ulos pengikat dua hati laksana rotan kuat beserta busana adat formal pengantin.",
-    hint: "Ragi Hotang melambangkan ikatan perkawinan sekuat rotan. Pasangkan dengan Baju Adat, Celana Adat, Sabuk Adat, dan Tali-tali Adat.",
-    success: "Sempurna! Ulos Ragi Hotang dengan set busana adat pengantin ini melambangkan restu agar ikatan pernikahan mereka kokoh, lentur, dan abadi menghadapi kehidupan.",
+    title: "Wedding Blessing (Mangulosi Hela)",
+    prompt: "A grand Batak Toba traditional wedding is taking place. Dress the groom with the Ulos that binds two hearts like strong rattan along with the wedding formal attire.",
+    hint: "Ragi Hotang symbolizes a marriage bond as strong as rattan. Pair it with Baju Adat, Celana Adat, Sabuk Adat, and Tali-tali Adat.",
+    success: "Perfect! Ulos Ragi Hotang with this wedding attire set symbolizes the wish that their marriage bond remains strong, flexible, and everlasting through life's journey.",
     correctOutfit: {
       baju: "baju-adat",
       celana: "celana-adat",
@@ -223,10 +223,10 @@ const SCENARIOS: Scenario[] = [
   },
   {
     id: "celebration",
-    title: "Menyambut Tamu Terhormat (Ulos Holong)",
-    prompt: "Seorang tokoh penting datang menghadiri pesta rakyat yang sangat ceria. Pilihkan set pakaian wanita yang penuh warna sukacita dan anggun untuk menunjukkan keramahan khas Batak.",
-    hint: "Kain tenun warna-warni yang riang adalah Ulos Sadum. Pasangkan dengan Kebaya Batak, Celana Songket, Sabuk Renda, dan Tali-tali Sadum.",
-    success: "Indah sekali! Ulos Sadum dan Kebaya Batak memancarkan energi sukacita yang hangat serta penghargaan tertinggi bagi tamu kehormatan.",
+    title: "Welcoming Honored Guests (Ulos Holong)",
+    prompt: "A prominent figure arrives to attend a very cheerful folk festival. Select a women's outfit that is full of joyful colors and elegant to show typical Batak hospitality.",
+    hint: "The cheerful and colorful woven fabric is Ulos Sadum. Pair it with Kebaya Batak, Celana Songket, Sabuk Renda, and Tali-tali Sadum.",
+    success: "Beautiful! Ulos Sadum and Kebaya Batak radiate warm joyful energy and the highest appreciation for the honored guest.",
     correctOutfit: {
       baju: "baju-kebaya",
       celana: "celana-songket",
@@ -238,10 +238,10 @@ const SCENARIOS: Scenario[] = [
   },
   {
     id: "mourning",
-    title: "Ritual Penghormatan Terakhir (Duka Adat)",
-    prompt: "Keluarga berkumpul dengan rasa hormat mendalam dalam upacara duka cita adat. Lengkapilah pakaian duka lara dengan Ulos yang meneduhkan jiwa tanpa aksen keemasan yang mencolok.",
-    hint: "Kain duka cita adalah Ulos Sibolang. Pasangkan bersama Baju Adat, Celana Adat, Sabuk Adat, dan Tali-tali Adat.",
-    success: "Benar. Ulos Sibolang dengan busana gelap yang bersahaja mencerminkan empati mendalam, ketabahan hati, dan penghormatan tulus dalam keheningan.",
+    title: "Final Respects Ritual (Customary Mourning)",
+    prompt: "The family gathers with deep respect in a customary mourning ceremony. Complete the mourning attire with the soul-comforting Ulos, without flashing gold accents.",
+    hint: "The mourning fabric is Ulos Sibolang. Pair it with Baju Adat, Celana Adat, Sabuk Adat, and Tali-tali Adat.",
+    success: "Correct. Ulos Sibolang with simple dark clothing reflects deep empathy, fortitude, and sincere respect in silence.",
     correctOutfit: {
       baju: "baju-adat",
       celana: "celana-adat",
@@ -253,10 +253,10 @@ const SCENARIOS: Scenario[] = [
   },
   {
     id: "leadership",
-    title: "Penganugerahan Status Pemimpin Adat",
-    prompt: "Seorang tokoh masyarakat dinobatkan menjadi Pemimpin Adat Senior. Dandani beliau dengan mahkota adat dan Ulos kepemimpinan yang sangat sakral dan termahal.",
-    hint: "Ulos kepemimpinan sakral adalah Ulos Pinunsaan. Sandingkan dengan Baju Raja, Celana Adat, Sabuk Raja, dan Topi Raja.",
-    success: "Luar biasa, sempurna! Ulos Pinunsaan dipadukan bersama mahkota Raja melambangkan amanah kepemimpinan luhur yang mengayomi seluruh warga adat.",
+    title: "Bestowing Custom Leader Status",
+    prompt: "A community figure is being inaugurated as a Senior Customary Leader. Dress him with the customary crown and the highly sacred, most expensive Ulos of leadership.",
+    hint: "The sacred leadership Ulos is Ulos Pinunsaan. Pair it with Baju Raja, Celana Adat, Sabuk Raja, and Topi Raja.",
+    success: "Outstanding, perfect! Ulos Pinunsaan combined with the King's crown (topi Raja) symbolizes noble leadership responsibility protecting all customary members.",
     correctOutfit: {
       baju: "baju-raja",
       celana: "celana-adat",
@@ -269,11 +269,11 @@ const SCENARIOS: Scenario[] = [
 ];
 
 const DRAWERS: { id: Category; label: string; emoji: string }[] = [
-  { id: "baju", label: "Baju", emoji: "👔" },
-  { id: "celana", label: "Celana", emoji: "👖" },
+  { id: "baju", label: "Shirt", emoji: "👔" },
+  { id: "celana", label: "Trousers", emoji: "👖" },
   { id: "ulos", label: "Ulos", emoji: "🧣" },
-  { id: "ikat-pinggang", label: "Sabuk", emoji: "🎗️" },
-  { id: "topi", label: "Topi", emoji: "👑" },
+  { id: "ikat-pinggang", label: "Belt", emoji: "🎗️" },
+  { id: "topi", label: "Hat", emoji: "👑" },
 ];
 
 // ─── DraggableItem ─────────────────────────────────────────────────────────────
@@ -453,7 +453,7 @@ function CharacterDropZone({
 
     } catch (error) {
       console.error("Failed to download outfit image:", error);
-      alert("Maaf, terjadi kesalahan saat menyusun gambar busana adat.");
+      alert("Sorry, an error occurred while assembling the traditional attire image.");
     } finally {
       setIsDownloadingOutfit(false);
     }
@@ -470,7 +470,7 @@ function CharacterDropZone({
       <div className="absolute top-3 left-3 right-3 z-50 flex items-center justify-between gap-2">
         <p className={`flex-1 text-center text-[10px] font-black uppercase tracking-widest py-2 px-3 rounded-full transition-all
           ${isOver ? "bg-[#FDA481] text-[#181A2F]" : "bg-white/10 text-white/40"}`}>
-          {isOver ? "✨ LEPASKAN UNTUK MEMAKAI!" : "SERET ITEM KE SINI"}
+          {isOver ? "✨ RELEASE TO EQUIP!" : "DRAG ITEM HERE"}
         </p>
         
         {Object.keys(equipped).length > 0 && (
@@ -478,9 +478,9 @@ function CharacterDropZone({
             onClick={handleDownloadOutfit}
             disabled={isDownloadingOutfit}
             className="bg-[#FDA481] hover:bg-white disabled:bg-[#FDA481]/50 text-[#181A2F] text-[10px] font-black py-2 px-3 rounded-full uppercase tracking-wider transition-all flex items-center gap-1 shadow-md cursor-pointer disabled:cursor-not-allowed"
-            title="Unduh kombinasi pakaian adat Batak Anda sebagai gambar PNG premium!"
+            title="Download your Batak traditional attire combination as a premium PNG image!"
           >
-            {isDownloadingOutfit ? "📥 MENGUNDUH..." : "📥 UNDUH GAMBAR"}
+            {isDownloadingOutfit ? "📥 DOWNLOADING..." : "📥 DOWNLOAD IMAGE"}
           </button>
         )}
       </div>
@@ -492,7 +492,7 @@ function CharacterDropZone({
             <div className="absolute inset-0 border-4 border-white/10 rounded-full" />
             <div className="absolute inset-0 border-4 border-t-[#FDA481] border-r-transparent border-b-transparent border-l-transparent rounded-full animate-spin" />
           </div>
-          <p className="text-[10px] font-black uppercase tracking-widest text-[#FDA481] animate-pulse">MEMUAT MODEL...</p>
+          <p className="text-[10px] font-black uppercase tracking-widest text-[#FDA481] animate-pulse">LOADING MODEL...</p>
         </div>
       )}
 
@@ -603,7 +603,7 @@ function CharacterDropZone({
       {Object.keys(equipped).length > 0 && (
         <div className="absolute bottom-3 left-3 right-3 z-40 flex flex-wrap gap-1.5 justify-center bg-black/40 backdrop-blur-md p-3 rounded-2xl border border-white/10">
           <p className="w-full text-center text-[10px] font-black text-[#FDA481] uppercase tracking-widest mb-1.5 animate-pulse">
-            Klik item terpasang untuk penjelasan:
+            Click equipped item for explanation:
           </p>
           {DRAWERS.map(d => {
             const outfitItem = equipped[d.id];
@@ -907,7 +907,7 @@ export default function GameMangulosi({
               className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/75 backdrop-blur-xs pointer-events-none"
             >
               <h2 className="text-4xl md:text-5xl font-black text-[#FDA481] tracking-tighter uppercase drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] text-center px-4 animate-bounce">
-                ✨ {wearingItem.name} terpasang! ✨
+                ✨ {wearingItem.name} equipped! ✨
               </h2>
               <p className="text-white/80 font-black text-sm tracking-widest uppercase drop-shadow-md mt-2">
                 Batak Costume Layer Fitted
@@ -987,10 +987,10 @@ export default function GameMangulosi({
           <div className="flex-1 space-y-2">
             <div className="flex items-center gap-2">
               <span className="bg-[#FDA481]/20 text-[#FDA481] px-3 py-1 font-black text-xs uppercase rounded-full">
-                SKENARIO {scenarioIndex + 1} / {SCENARIOS.length}
+                SCENARIO {scenarioIndex + 1} / {SCENARIOS.length}
               </span>
               <span className="bg-white/10 text-white/50 px-3 py-1 font-bold text-xs rounded-full uppercase tracking-wider">
-                Langkah: {currentStep === "baju" ? "1. Baju" : currentStep === "celana" ? "2. Celana" : "3. Ulos"}
+                Step: {currentStep === "baju" ? "1. Shirt" : currentStep === "celana" ? "2. Trousers" : "3. Ulos"}
               </span>
             </div>
             <h3 className="text-xl font-black text-white uppercase tracking-tight">{scenario.title}</h3>
@@ -1008,9 +1008,9 @@ export default function GameMangulosi({
               />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-[10px] font-black uppercase text-[#FDA481] tracking-wider mb-0.5">Petunjuk Asisten:</p>
+              <p className="text-[10px] font-black uppercase text-[#FDA481] tracking-wider mb-0.5">Assistant Guidance:</p>
               <p className="text-xs text-white/90 font-medium leading-snug">
-                Pasangkan <span className="text-[#FDA481] font-black">{currentStep === "baju" ? "Baju/Kebaya" : currentStep === "celana" ? "Celana/Songket" : "Kain Ulos"}</span> berikut:
+                Equip the following <span className="text-[#FDA481] font-black">{currentStep === "baju" ? "Shirt/Kebaya" : currentStep === "celana" ? "Trousers/Songket" : "Ulos Fabric"}</span>:
                 <br />
                 <span className="text-[#FDA481] font-black underline tracking-tight">{targetItem?.name}</span>
               </p>
@@ -1037,7 +1037,7 @@ export default function GameMangulosi({
 
           {/* LEFT — Guided Inventory */}
           <div className="space-y-3">
-            <p className="text-xs font-black uppercase tracking-widest text-[#FDA481]">🎒 INVENTORY — Pilih Laci & Seret Item</p>
+            <p className="text-xs font-black uppercase tracking-widest text-[#FDA481]">🎒 INVENTORY — Select Drawer & Drag Item</p>
 
             {/* Drawer Tabs (Read-only/Disabled Click for Sequence Enforcement) */}
             <div className="grid grid-cols-3 gap-1.5">
@@ -1080,7 +1080,7 @@ export default function GameMangulosi({
                 className="bg-white/5 border border border-white/15 rounded-2xl p-4"
               >
                 <p className="text-xs text-white/40 font-bold uppercase mb-3">
-                  {DRAWERS.find(d => d.id === activeDrawer)?.emoji} Pilihan {DRAWERS.find(d => d.id === activeDrawer)?.label} — seret ke karakter
+                  {DRAWERS.find(d => d.id === activeDrawer)?.emoji} {DRAWERS.find(d => d.id === activeDrawer)?.label} Selection — drag to character
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {drawerItems.map(item => (
@@ -1092,9 +1092,9 @@ export default function GameMangulosi({
 
             {/* Instructions info panel */}
             <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
-              <p className="text-[10px] font-black uppercase tracking-widest text-[#FDA481] mb-1">💡 Petunjuk Bermain</p>
+              <p className="text-[10px] font-black uppercase tracking-widest text-[#FDA481] mb-1">💡 How to Play</p>
               <p className="text-xs text-[#fff7ef]/70 leading-normal font-medium">
-                Seret pakaian adat Batak di atas ke arah model karakter di samping sesuai petunjuk asisten. Pakaian harus dipasang secara berurutan!
+                Drag the Batak traditional attire above to the character model on the side according to the assistant's guidance. Attire must be equipped in order!
               </p>
             </div>
           </div>
@@ -1121,33 +1121,33 @@ export default function GameMangulosi({
             {feedback !== "idle" ? (
               <motion.div key={feedbackText} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="text-center w-full">
                 <p className={`inline-block text-base font-black uppercase px-5 py-2 rounded-full mb-3 ${feedback === "correct" ? "bg-[#FDA481]/30 text-[#FDA481]" : "bg-red-400/20 text-red-300"}`}>
-                  {feedback === "correct" ? "🎉 PROGRES MENAKJUBKAN!" : "❌ PILIHAN BELUM TEPAT!"}
+                  {feedback === "correct" ? "🎉 AMAZING PROGRESS!" : "❌ INCORRECT SELECTION!"}
                 </p>
                 <p className="text-[#fff7ef]/80 font-medium text-sm max-w-xl mx-auto">{feedbackText}</p>
                 
                 {feedback === "correct" && currentStep === "ulos" && (
                   <div className="mt-4 p-3 bg-[#FDA481]/10 border border-[#FDA481]/25 rounded-2xl max-w-md mx-auto text-[#FDA481] font-bold text-xs uppercase tracking-wider animate-bounce">
-                    ✨ Klik nama pakaian adat terpasang pada gambar karakter untuk makna budayanya!
+                    ✨ Click the name of the equipped traditional attire on the character image for its cultural meaning!
                   </div>
                 )}
 
                 {feedback === "correct" && currentStep === "ulos" && !completed && (
                   <button onClick={next} className="mt-4 rounded-full bg-[#FDA481] text-[#181A2F] px-8 py-3 font-bold hover:bg-white transition-all hover:scale-105 shadow-lg">
-                    SKENARIO BERIKUTNYA →
+                    NEXT SCENARIO →
                   </button>
                 )}
                 {completed && (
                   <div className="mt-4 flex flex-wrap justify-center gap-3">
-                    <span className="text-[#FDA481] font-black text-lg">🏆 Semua Skenario Selesai! Anda Hebat!</span>
+                    <span className="text-[#FDA481] font-black text-lg">🏆 All Scenarios Complete! You are Awesome!</span>
                     <button onClick={reset} className="rounded-full bg-[#FDA481] text-[#181A2F] px-6 py-2.5 font-bold hover:bg-white transition-all">
-                      MAIN DARI AWAL
+                      PLAY FROM START
                     </button>
                   </div>
                 )}
               </motion.div>
             ) : (
               <motion.p key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center text-white/30 font-black uppercase tracking-widest text-xs">
-                Selesaikan langkah demi langkah sesuai dengan petunjuk visual asisten di atas!
+                Complete step-by-step according to the visual assistant's guidance above!
               </motion.p>
             )}
           </AnimatePresence>
