@@ -678,7 +678,21 @@ export default function GameMangulosi({
       utterance.lang = "en-US";
       
       const voices = window.speechSynthesis.getVoices();
-      const enVoice = voices.find(v => v.lang.startsWith("en-US") || v.lang.startsWith("en-GB") || v.lang.startsWith("en"));
+      const enFemaleVoice = voices.find(v => {
+        const name = v.name.toLowerCase();
+        const isEnglish = v.lang.startsWith("en-US") || v.lang.startsWith("en-GB") || v.lang.startsWith("en");
+        return isEnglish && (
+          name.includes("zira") || 
+          name.includes("samantha") || 
+          name.includes("susan") || 
+          name.includes("hazel") ||
+          name.includes("karen") ||
+          name.includes("female") ||
+          name.includes("google us english") ||
+          name.includes("natural")
+        );
+      });
+      const enVoice = enFemaleVoice || voices.find(v => v.lang.startsWith("en-US") || v.lang.startsWith("en-GB") || v.lang.startsWith("en"));
       if (enVoice) {
         utterance.voice = enVoice;
       }
