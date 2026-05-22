@@ -43,3 +43,36 @@ Untuk mendukung mekanik *Spin & Swap* di atas, project ini menggunakan pendekata
 * **`@dnd-kit/core`:** Mengelola state *drag-and-drop*, mendeteksi benturan (*collision*) antara Ulos dan Karakter.
 * **`framer-motion`:** Mengelola animasi manipulasi DOM seperti `rotateY` untuk efek ganti baju (Spin & Swap), efek *bounce*, dan transisi halaman.
 * **`zustand`:** Menyimpan *state* global seperti inventori Ulos yang sudah ditenun dan skor pemain.
+
+
+
+========================UPDATE BARU ===========================
+
+untuk penjelasan dari setiap pakaian adat nya kita buat dalam bahasa inggris , dan penjelasan dengan suara juga dalam bahasa inggris 
+jadi ketika di klik muncul pop up penjelasan nya , dan juga ada suara penjelasan nya 
+
+untuk ui nya di sesuaikan , pokonya ada animasi nya jangan sampai tidak ada animasi nya sama sekali
+
+dan kita akan buat seperti asisten di pojok kanan bawah yang akan memberikan petunjuk kepada pemain, dia nanti akan meminta pemain untuk membuat 1 set pakaian adat lengkap, yang terdiri dari baju , celana, dan ulos
+
+jadi nanti akan seperti ini 
+- asisten akan meminta pemain untuk membuat 1 set pakaian adat lengkap
+
+
+==================== TAMBAHAN UPDATE==================
+- hapus kolom text asisten nya
+- tugas asistennya hanya untuk memberikan petunjuk ,ketika pemain akan memakaikan baju , dia akan memberi petunjuk apa nama baju yg harus di pasangkan, dan contoh gambarnya juga akan muncul di sampingnya 
+- ketika pasangannya sudah benar maka akan ada animasi pakaian adat tersebut di pakai dan muncul suara penjelasan nya dalam bahasa inggris 
+- ketika belum benar maka asisten akan memberi petunjuk dengan pesan kmu masih salah coba lagi
+- ketika benar maka asisten akan memberi suara selamat dan lanjut ke pemilihan celana  
+- untuk animasi memakai baju nya bisa lebih kreatif lagi
+- dan asistennya ga bisa di klik lagi . asistennya hanya berbicara sesuai template saja ( ketika memilih baju , asisten memberi tau baju apa yg harus di pasangkan, ketika memilih celana , asisten memberi tau celana apa yg harus di pasangkan, ketika memilih ulos , asisten memberi tau ulos apa yg harus di pasangkan ) 
+
+untuk tampilan 
+- buat agar ketika di buka di perangkat mobile asistennya tidak menutupi layar utama, tampilannya di buat sedikit lebih kecil 
+-
+
+
+dari game 1 hingga final quiz buat sistem dimana user harus selesai dulu dengan kuis sebelumnya sebelum lanjut ke game selanjutnya 
+contoh 
+- user harus menyelesaikan game 1 dulu baru bisa lanjut ke game 2 , jika belum selesai maka tidak bisa lanjut ke game 2 dan seterusnya 

@@ -48,72 +48,61 @@ function RevealSection({
   );
 }
 
-const ulosCatalog = [
+const ensembleCatalog = [
   {
     id: "1",
-    name: "Ulos Ragidup",
-    subtitle: "The Epicenter of Life & Blessings",
+    name: "Tutup Kepala (Tali-tali / Topi)",
+    subtitle: "Mahkota Kehormatan & Kebijaksanaan",
     description:
-      'The highest-ranking Ulos in Toba hierarchy. Its name literally means "pattern of life", a visual prayer for harmony, abundant offspring, and longevity.',
+      "Tutup kepala tradisional Batak Toba (seperti Tali-tali Adat atau Topi Raja) melambangkan konsentrasi pikiran yang lurus, wibawa kepemimpinan adat, kehormatan diri yang dijaga luhur, serta perlindungan rohani.",
     meaning:
-      "Given by the bride's parents to the groom's mother during weddings as a transfer of guardianship and deep familial bond.",
-    ceremony: "Wedding (Ulos Pargomgom)",
+      "Ikat kepala sitorga tenun tiga warna sakral (merah, putih, hitam) menyimbolkan kekuatan, kesucian, dan kewibawaan yang bersatu selaras mematuhi tatanan adat Dalihan Na Tolu.",
+    ceremony: "Upacara Penobatan & Pernikahan",
     tag: "Sacred",
   },
   {
     id: "2",
-    name: "Ulos Ragihotang",
-    subtitle: "Symbol of Marital Bond & Resilience",
+    name: "Baju Raja / Baju Adat",
+    subtitle: "Wibawa & Karakter Pemimpin Sejati",
     description:
-      'Named after "hotang" (rattan), the strongest natural binder. It features dot-like patterns resembling rattan texture with wide, beautifully fringed edges.',
+      "Pakaian atas berbahan beludru hitam tebal dengan sulaman benang emas megah pada pinggirannya. Menunjukkan kedudukan sosial yang tinggi bagi para pemuka adat atau raja.",
     meaning:
-      "Draped over both newlyweds' shoulders simultaneously, symbolizing the unification of two individuals into one bond as strong as rattan.",
-    ceremony: "Wedding (Ulos Hela)",
-    tag: "Matrimonial",
+      "Menggambarkan wibawa kepemimpinan yang mengayomi seluruh lapisan masyarakat, kejujuran luhur, pertahanan mental, serta karisma yang bersahaja.",
+    ceremony: "Pernikahan & Sidang Adat",
+    tag: "Royal",
   },
   {
     id: "3",
-    name: "Ulos Sadum",
-    subtitle: "Aesthetics of Joy & Cultural Diplomacy",
+    name: "Kain Ulos Adat",
+    subtitle: "Selendang Doa Restu & Kehangatan Jiwa",
     description:
-      "Known for its bright palette, dominant red tones, floral motifs, and decorative beadwork. It embodies the dynamism and cheerfulness of Batak society.",
+      "Kain tenun sakral khas Batak (Ragidup, Ragi Hotang, Sadum, dll.) yang disampirkan di pundak atau dililitkan di dada, membawa berkat doa luhur dari leluhur.",
     meaning:
-      "Used as Ulos Holong, a love cloth given by guests to express joy at weddings or births. It also serves as a cultural diplomacy gift for honored guests.",
-    ceremony: "Celebrations & Diplomacy",
-    tag: "Festive",
+      "Tradisi 'Mangulosi' melambangkan restu kehangatan kasih sayang, doa perlindungan hidup, umur panjang, serta ikatan persaudaraan yang kokoh tak terpisahkan.",
+    ceremony: "Momen Sakral & Pesta Sukacita",
+    tag: "Sacred",
   },
   {
     id: "4",
-    name: "Ulos Sibolang",
-    subtitle: "Cloth of Transition & Mourning",
+    name: "Sabuk / Ikat Pinggang Adat",
+    subtitle: "Disiplin Diri & Pengendalian Nafsu",
     description:
-      "Distinguished by its dark navy or black base with arrowhead motifs on both ends. It plays a vital role during life's most painful transitions.",
+      "Ikat pinggang tenun tebal dengan hiasan geometris khas Batak yang melingkari busana dengan erat dan rapi.",
     meaning:
-      "Used as burial shroud and as head covering for the surviving spouse, marking a period of deep mourning before re-entering society.",
-    ceremony: "Funeral Rites",
-    tag: "Ceremonial",
-  },
-  {
-    id: "5",
-    name: "Ulos Bintang Maratur",
-    subtitle: "Prayer for Orderly Regeneration",
-    description:
-      "Features neatly arranged star patterns symbolizing obedience to customary law, orderly living, and family harmony.",
-    meaning:
-      "Given by the Hula-hula to their daughter during the seventh-month pregnancy ceremony as a prayer for safe delivery and a righteous child.",
-    ceremony: "Pregnancy Ceremony",
+      "Melambangkan kesiapan diri penuh untuk bekerja keras, keteguhan hati memegang janji luhur, integritas moral tinggi, serta kemampuan mengontrol nafsu negatif.",
+    ceremony: "Pesta Pernikahan & Ritual Adat",
     tag: "Blessing",
   },
   {
-    id: "6",
-    name: "Ulos Pinunsaan",
-    subtitle: "Elite Cloth of Leadership",
+    id: "5",
+    name: "Haen / Celana Adat",
+    subtitle: "Kekokohan Langkah & Tanggung Jawab",
     description:
-      "One of the most expensive and sacred Ulos types. It is technically similar to Ragidup but has far more intricate detail and larger dimensions.",
+      "Kain bawahan lilit tradisional (Haen) bagi kaum wanita atau celana formal hitam dengan detail songket emas di bagian bawahnya bagi kaum pria.",
     meaning:
-      "A mandatory attribute for customary leaders and ceremony hosts at large-scale traditional events, expressing status and responsibility.",
-    ceremony: "Leadership & Grand Ceremonies",
-    tag: "Royal",
+      "Melambangkan pondasi karakter hidup yang kokoh, kesiapan memikul tanggung jawab besar sebagai penopang keluarga, serta kedisiplinan langkah dalam mengarungi kerasnya kehidupan.",
+    ceremony: "Aktivitas Harian & Resepsi Adat",
+    tag: "Ceremonial",
   },
 ];
 
@@ -127,7 +116,7 @@ const tagColors: Record<string, string> = {
 };
 
 export default function LandingPage() {
-  const [expandedUlos, setExpandedUlos] = useState<string | null>(null);
+  const [expandedEnsemble, setExpandedEnsemble] = useState<string | null>(null);
 
   return (
     <>
@@ -220,25 +209,22 @@ export default function LandingPage() {
         <nav className="relative z-30 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
           <a href="#" className="flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#181A2F]/85 text-sm font-black text-[#FDA481] ring-1 ring-white/20">
-              U
+              S
             </span>
             <span className="text-lg font-extrabold tracking-tight">
-              Ulos<span className="text-[#FDA481]">Budaya</span>
+              DigitalFashion<span className="text-[#FDA481]">Studio</span>
             </span>
           </a>
 
           <div className="glass hidden rounded-full px-2 py-2 text-sm font-semibold text-white/82 md:flex">
             <a href="#catalog" className="rounded-full px-5 py-2 transition hover:bg-white/12 hover:text-white">
-              Catalog
-            </a>
-            <a href="#philosophy" className="rounded-full px-5 py-2 transition hover:bg-white/12 hover:text-white">
-              Philosophy
+              Traditional Ensemble
             </a>
             <a href="#journey" className="rounded-full px-5 py-2 transition hover:bg-white/12 hover:text-white">
-              Journey
+              Interactive Journey
             </a>
             <a href="/game/materials" className="rounded-full px-5 py-2 transition hover:bg-white/12 hover:text-white">
-              Learning
+              Learning Stages
             </a>
           </div>
 
@@ -246,7 +232,7 @@ export default function LandingPage() {
             href="/game/play"
             className="rounded-full bg-[#FDA481]/92 px-5 py-2.5 text-sm font-extrabold text-[#181A2F] shadow-lg shadow-[#54162B]/24 transition hover:bg-white"
           >
-            Start Game
+            Start Studio
           </a>
         </nav>
 
@@ -255,18 +241,16 @@ export default function LandingPage() {
             <div className="max-w-3xl">
               <div className="anim-hero glass mb-7 inline-flex items-center gap-3 rounded-full px-4 py-2 text-xs font-extrabold uppercase tracking-[0.24em] text-[#ffe1d0]">
                 <span className="h-2 w-2 rounded-full bg-[#FDA481] shadow-[0_0_18px_rgba(253,164,129,0.9)]" />
-                Interactive Ulos Culture
+                Digital Fashion Studio
               </div>
 
               <h1 className="anim-hero-d1 text-5xl font-extrabold leading-[1.06] tracking-tight text-white md:text-7xl">
-                Explore Ulos through a warm{" "}
-                <span className="font-serif italic font-semibold text-[#FDA481]">glassy</span>{" "}
-                interface.
+                Batak Traditional<br />
+                <span className="font-serif italic font-semibold text-[#FDA481]">Ensemble Studio</span>
               </h1>
 
               <p className="anim-hero-d2 mt-7 max-w-2xl text-base font-medium leading-8 text-[#ffe8dc]/82 md:text-lg">
-                Discover the philosophy, motifs, and weaving process of Batak Ulos through an
-                immersive, modern, and culturally grounded learning experience.
+                Jelajahi, padupadankan, dan pahami makna filosofis mendalam dari pakaian adat Batak Toba seutuhnya—mulai dari Baju Raja, Celana, Sabuk Adat, Ulos sakral, hingga Tutup Kepala—melalui studio interaktif digital yang modern dan elegan.
               </p>
 
               <div className="anim-hero-d3 mt-9 flex flex-wrap gap-4">
@@ -274,7 +258,7 @@ export default function LandingPage() {
                   href="/game/play"
                   className="inline-flex items-center justify-center rounded-full bg-[#FDA481]/92 px-7 py-4 font-extrabold text-[#181A2F] shadow-xl shadow-[#54162B]/25 transition hover:-translate-y-0.5 hover:bg-white"
                 >
-                  Start Weaving Simulation
+                  Masuki Studio Adat
                   <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
@@ -283,13 +267,13 @@ export default function LandingPage() {
                   href="#catalog"
                   className="glass inline-flex items-center justify-center rounded-full px-7 py-4 font-bold text-white transition hover:bg-white/20"
                 >
-                  View Collection
+                  Koleksi Busana
                 </a>
                 <a
                   href="/game/materials"
                   className="glass inline-flex items-center justify-center rounded-full px-7 py-4 font-bold text-white transition hover:bg-white/20"
                 >
-                  Learning
+                  Modul Belajar
                 </a>
               </div>
             </div>
@@ -301,14 +285,15 @@ export default function LandingPage() {
                     src="/images/landing.png"
                     alt="Batak couple in traditional Ulos attire"
                     fill
+                    priority
                     sizes="(min-width: 1024px) 46vw, 100vw"
                     className="absolute inset-0 h-full w-full object-contain object-bottom drop-shadow-2xl"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#181A2F]/92 via-transparent to-[#FDA481]/12" />
                   <div className="glass absolute bottom-5 left-5 right-5 rounded-[1.35rem] p-5">
-                    <p className="font-serif text-2xl italic text-white">Threads of prayer and hope</p>
+                    <p className="font-serif text-xl italic text-white">Doa & Restu dalam Lembaran Busana</p>
                     <p className="mt-2 text-xs font-extrabold uppercase tracking-[0.24em] text-[#FDA481]">
-                      Indonesian Heritage
+                      Warisan Agung Adat Batak Toba
                     </p>
                   </div>
                 </div>
@@ -317,82 +302,32 @@ export default function LandingPage() {
           </div>
         </header>
 
-        <RevealSection>
-          <section className="relative z-20 mx-auto -mt-8 mb-20 max-w-6xl px-5 md:px-8">
-            <div className="glass grid gap-4 rounded-[1.75rem] p-5 md:grid-cols-3 md:p-7">
-              {[
-                ["5+", "Interactive Stages"],
-                [String(ulosCatalog.length), "Types of Ulos"],
-                ["100%", "Cultural Appreciation"],
-              ].map(([number, label]) => (
-                <div key={label} className="rounded-[1.35rem] border border-white/12 bg-[#181A2F]/26 p-6 text-center">
-                  <p className="text-4xl font-black text-[#FDA481]">{number}</p>
-                  <p className="mt-1 text-sm font-semibold text-white/72">{label}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        </RevealSection>
-
-        <section id="philosophy" className="weave-lines px-5 py-24 md:px-8">
-          <div className="mx-auto max-w-6xl">
-            <RevealSection className="mb-14 max-w-3xl">
-              <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#FDA481]">
-                Cultural Philosophy
-              </span>
-              <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
-                More than cloth, Ulos is a living blessing.
-              </h2>
-              <p className="mt-5 text-lg font-medium leading-8 text-[#ffe8dc]/78">
-                In Batak culture, Ulos carries warmth, love, prayers, and family identity passed
-                down across generations.
-              </p>
-            </RevealSection>
-
-            <div className="grid gap-5 md:grid-cols-3">
-              {[
-                ["01", "Historical Value", "Every motif preserves ancestral stories and the social identity of Batak people across generations."],
-                ["02", "Philosophy of Life", "The tradition of giving Ulos, or Mangulosi, reflects kinship, respect, and the Dalihan Na Tolu structure."],
-                ["03", "Master Craftsmanship", "The weaving process trains patience, precision, rhythm, and attention to meaning in every thread."],
-              ].map(([number, title, copy], index) => (
-                <RevealSection key={title} delay={index * 120}>
-                  <article className="glass hover-lift h-full rounded-[1.65rem] p-7">
-                    <p className="text-6xl font-black text-[#FDA481]/26">{number}</p>
-                    <h3 className="mt-6 text-2xl font-extrabold text-white">{title}</h3>
-                    <p className="mt-4 text-sm font-medium leading-7 text-[#ffe8dc]/76">{copy}</p>
-                  </article>
-                </RevealSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
+        {/* Catalog Section — Redesigned into Traditional Ensemble */}
         <section id="catalog" className="px-5 py-24 md:px-8">
           <div className="mx-auto max-w-7xl">
             <RevealSection className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div className="max-w-2xl">
                 <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#FDA481]">
-                  Encyclopedia Catalog
+                  Katalog Ensiklopedia
                 </span>
                 <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
-                  Discover Ulos Types
+                  Traditional Ensemble
                 </h2>
                 <p className="mt-5 text-base font-medium leading-8 text-[#ffe8dc]/78">
-                  Each Ulos carries centuries of meaning, from sacred wedding cloths to symbols of
-                  leadership, mourning, and blessing.
+                  Setiap elemen pakaian adat Batak menyimpan doa, amanah, tatanan moral, dan status adat yang diwariskan secara turun-temurun dari generasi ke generasi.
                 </p>
               </div>
               <div className="glass rounded-full px-5 py-2.5 text-sm font-extrabold text-[#FDA481]">
-                {ulosCatalog.length} types
+                {ensembleCatalog.length} Komponen Utama
               </div>
             </RevealSection>
 
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {ulosCatalog.map((ulos, idx) => {
-                const isExpanded = expandedUlos === ulos.id;
+              {ensembleCatalog.map((item, idx) => {
+                const isExpanded = expandedEnsemble === item.id;
 
                 return (
-                  <RevealSection key={ulos.id} delay={idx * 85}>
+                  <RevealSection key={item.id} delay={idx * 85}>
                     <article
                       className={`glass-dark hover-lift h-full rounded-[1.65rem] transition ${
                         isExpanded ? "ring-1 ring-[#FDA481]/55" : ""
@@ -405,33 +340,33 @@ export default function LandingPage() {
                           </div>
                           <span
                             className={`rounded-full px-3 py-1 text-xs font-extrabold ring-1 ${
-                              tagColors[ulos.tag] || tagColors.Sacred
+                              tagColors[item.tag] || tagColors.Sacred
                             }`}
                           >
-                            {ulos.tag}
+                            {item.tag}
                           </span>
                         </div>
 
-                        <h3 className="text-xl font-black text-white">{ulos.name}</h3>
+                        <h3 className="text-xl font-black text-white">{item.name}</h3>
                         <p className="mt-1 font-serif text-sm font-semibold italic text-[#FDA481]">
-                          {ulos.subtitle}
+                          {item.subtitle}
                         </p>
                         <p className="mt-4 text-sm font-medium leading-7 text-[#ffe8dc]/76">
-                          {ulos.description}
+                          {item.description}
                         </p>
 
                         <div className="mt-5 inline-flex rounded-full border border-white/12 bg-white/8 px-3 py-1.5 text-xs font-bold text-white/74">
-                          {ulos.ceremony}
+                          {item.ceremony}
                         </div>
 
                         <button
                           type="button"
-                          onClick={() => setExpandedUlos(isExpanded ? null : ulos.id)}
+                          onClick={() => setExpandedEnsemble(isExpanded ? null : item.id)}
                           className="mt-6 w-full rounded-[1.2rem] border border-white/12 bg-white/9 p-4 text-left transition hover:bg-white/14"
                         >
                           <div className="flex items-center justify-between gap-3">
                             <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#FDA481]">
-                              Cultural Meaning
+                              Makna Filosofis Adat
                             </p>
                             <svg
                               className={`h-4 w-4 text-[#FDA481] transition-transform ${
@@ -446,7 +381,7 @@ export default function LandingPage() {
                           </div>
 
                           <p className="mt-3 text-sm font-medium leading-7 text-[#ffe8dc]/80">
-                            {isExpanded ? ulos.meaning : "Click to reveal cultural significance."}
+                            {isExpanded ? item.meaning : "Klik untuk menyingkap makna adat luhur."}
                           </p>
                         </button>
                       </div>
@@ -458,37 +393,37 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* Learning Journey section */}
         <RevealSection>
           <section id="journey" className="px-5 pb-24 md:px-8">
             <div className="glass-dark mx-auto grid max-w-6xl items-center gap-8 overflow-hidden rounded-[2rem] p-7 md:grid-cols-[1fr_0.7fr] md:p-10">
               <div>
                 <span className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#FDA481]">
-                  Learning Journey
+                  Interactive Studio Journey
                 </span>
                 <h2 className="mt-4 text-4xl font-black leading-tight text-white md:text-5xl">
-                  Ready to start the Ulos weaving simulation?
+                  Siap Memulai Petualangan Adat Batak?
                 </h2>
                 <p className="mt-5 max-w-2xl text-base font-medium leading-8 text-[#ffe8dc]/78">
-                  Learn the tools, understand the process, and test your knowledge through a guided
-                  interactive game flow.
+                  Pelajari nama alat tenun, uji kemampuan mencocokkan kegunaan alat tenun, rancang alur menenun, padukan pakaian adat Batak sesuai skenario adat, dan selesaikan quiz final.
                 </p>
                 <a
                   href="/game/play"
                   className="mt-8 inline-flex rounded-full bg-[#FDA481]/92 px-8 py-4 font-extrabold text-[#181A2F] shadow-xl shadow-[#54162B]/24 transition hover:bg-white"
                 >
-                  Play Game
+                  Masuk Game Center
                 </a>
                 <a
                   href="/game/materials"
                   className="ml-0 mt-3 inline-flex rounded-full bg-white/12 px-8 py-4 font-extrabold text-white transition hover:bg-white/18 md:ml-3"
                 >
-                  Learning
+                  Mulai Belajar
                 </a>
               </div>
 
               <div className="rounded-[1.5rem] border border-white/12 bg-[#181A2F]/32 p-5">
                 <div className="space-y-4">
-                  {["Materials", "Procedure", "Culture Quiz"].map((item, index) => (
+                  {["Materi Alat", "Mencocokkan Fungsi", "Alur Kerja Tenun", "Kuis & Menghias Busana"].map((item, index) => (
                     <div key={item} className="flex items-center gap-4 rounded-[1.15rem] bg-white/8 p-4">
                       <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#FDA481] text-sm font-black text-[#181A2F]">
                         {index + 1}
@@ -506,21 +441,13 @@ export default function LandingPage() {
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
             <div className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FDA481] text-sm font-black text-[#181A2F]">
-                U
+                D
               </div>
-              <span className="font-extrabold text-white">UlosBudaya</span>
+              <span className="font-bold text-white">Digital Fashion Studio</span>
             </div>
-            <p className="text-center text-sm font-medium">
-              © 2026 Ulos Interactive Learning. Preserving Indonesia&apos;s weaving heritage.
+            <p className="text-xs font-semibold text-white/50">
+              &copy; {new Date().getFullYear()} Digital Fashion Studio · Budaya Batak Toba.
             </p>
-            <div className="flex gap-6 text-sm font-bold">
-              <a href="#" className="transition hover:text-[#FDA481]">
-                Guide
-              </a>
-              <a href="#" className="transition hover:text-[#FDA481]">
-                About Us
-              </a>
-            </div>
           </div>
         </footer>
       </div>
