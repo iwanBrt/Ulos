@@ -5,7 +5,7 @@ import { useState, useEffect, Suspense } from "react";
 import { create } from "zustand";
 import GameSequence from "./GameSequence";
 import GameToolMatch from "./GameToolMatch";
-import GameMangulosi from "./GameMangulosi";
+import GameDressUp from "./GameDressUp";
 import GameQuiz from "./GameQuiz";
 
 type GameStore = { score: number; addScore: (n: number) => void; reset: () => void };
@@ -20,7 +20,7 @@ type Tab = "sequence" | "tools" | "mangulosi" | "quiz";
 const tabs: { id: Tab; label: string; emoji: string; title: string; desc: string }[] = [
   { id: "sequence", emoji: "🔀", label: "Game 1", title: "Arrange the Weaving Workflow", desc: "Drag & drop the weaving steps into the correct order" },
   { id: "tools", emoji: "🛠", label: "Game 2", title: "Match Tool to Function", desc: "Match each traditional weaving tool to its correct function" },
-  { id: "mangulosi", emoji: "👘", label: "Game 3", title: "Mangulosi — Choose the Ulos", desc: "Drag the correct Ulos onto the character for each ceremony scenario" },
+  { id: "mangulosi", emoji: "👘", label: "Game 3", title: "Batak Traditional Dress Up", desc: "Dress up the characters in correct traditional Batak outfits step-by-step!" },
   { id: "quiz", emoji: "🧠", label: "Final Quiz", title: "Batak Traditional Clothing Quiz", desc: "Test your knowledge of Batak traditional clothing & Ulos" },
 ];
 
@@ -52,12 +52,23 @@ export default function SangParulosGame() {
       }
       return next;
     });
+
+    // Auto-advance to the next game after a short delay
+    setTimeout(() => {
+      if (tab === "sequence") {
+        setActiveTab("tools");
+      } else if (tab === "tools") {
+        setActiveTab("mangulosi");
+      } else if (tab === "mangulosi") {
+        setActiveTab("quiz");
+      }
+    }, 1800);
   };
 
   const isLocked = (tabId: Tab) => {
     // LOCK SYSTEM BYPASSED DURING DEVELOPMENT
     // Change 'BYPASS_FOR_DEV' to 'false' to re-enable sequential locked progression
-    const BYPASS_FOR_DEV = true;
+    const BYPASS_FOR_DEV = false;
     if (BYPASS_FOR_DEV) return false;
 
     if (tabId === "sequence") return false;
@@ -176,10 +187,10 @@ export default function SangParulosGame() {
               <Suspense fallback={
                 <div className="flex flex-col items-center justify-center py-20 gap-4">
                   <div className="w-12 h-12 border-4 border-[#FDA481] border-t-transparent rounded-full animate-spin" />
-                  <p className="text-sm font-black uppercase tracking-widest text-[#FDA481] animate-pulse">Memuat Studio Busana...</p>
+                  <p className="text-sm font-black uppercase tracking-widest text-[#FDA481] animate-pulse">Loading Dress Up Studio...</p>
                 </div>
               }>
-                <GameMangulosi score={score} addScore={addScore} onComplete={() => markComplete("mangulosi")} />
+                <GameDressUp score={score} addScore={addScore} onComplete={() => markComplete("mangulosi")} />
               </Suspense>
             )}
             {activeTab === "quiz" && <GameQuiz onComplete={() => markComplete("quiz")} />}

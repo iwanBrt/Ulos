@@ -1,0 +1,52 @@
+update game 3
+- untuk sekarang game 3 kita sudah memiliki aset gambar dalam folder images
+- nanti gamenya akan menjadi seperti ini
+    1. kita memiliki 4 set pakaian lengkap [ 2 pria 2 wanita ]
+    2. setiap pakaian akan memiliki nama
+    3. nanti user akan di minta memakaikan 1 set pakaian adat lengkap pada carater
+    4. nanti sistem akan mengacak caracter dan set yg harus di pakaikan [ misal bisa aja set pakaian adat wanita , bisa aja set pakaian  raja pria , bisa aja set pakaian adat pria , dan bisa aja set pakaian kebaya wanita ]
+    5. nanti akan ada petunjuk tentang pakaian yang harus di pakaikan, contoh 
+        - baju yangL harus di pakaikan adalah baju adat wanita
+        - nah nanti user harus mencari diantara semua baju yang ada, dan memakaikan baju adat wanita tersebut pada carater wanita , hingga benar 
+        - kalau sudah benar maka lanjut memakaikan rok/celana
+        - dan seterusnya sampai lengkap [ begitu juga dengan set adat lainnya ]
+        - kalau set adatnya pria maka caraternya juga pria , dan kalau set adatnya wanita maka caraternya juga wanita 
+        - tidak ada memakaikan ulos lagi , 
+
+Berikut list yg harus di pakaikan ke masing masing set pakaian nya :
+
+==Baju adat pria== 
+1. perintilan_rok pria -edited
+2. perintilan_baju pria -edited
+3. perintilan_sortali_pria -edited
+4. perintilan_kalung_pria -edited
+5. perintilan_tongkat_pria -edited
+
+
+==Baju raja ==
+1. printilan_rok_raja -edited
+2. printilan_baju_raja -edited
+3. printilan_selendag_raja - edited
+4. printilan_mahkota_raja -edited
+5. printilan_bakul_raja -edited
+6. printilan_pedang_raja -edited
+
+
+==baju adat wanita 
+1. perintilan_rok_wanita -edited
+2. perintilan_baju_wanita -edited
+3. printilan_ikat pinggang_wanita - edited
+4. printilan_sortali_wanita -edited
+5. printilan_tas_wanita -edited
+6. printilan_kalung_wanita -edited
+
+
+==baju kebaya 
+1. perintilan_baju_kebaya -edited
+2. perintilan_rok_kebaya -edited
+3. perintilan_selendang_kebaya -edited
+4. perintilan_ikat pinggang_kebaya - edited
+5. perintilan_bros_kebaya - edited
+
+
+lihat di dalam folder images dan sub sub folder di dalam nya 
